@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="active-menu" content="">
+        <title>Health Detail Page</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="keywords" content="">
+        <meta name="description" content="Doctor On Call is Malaysia's fastest way to see a doctor and get medicine on your computer, tablet or phone- from the comfort of home.">
+        <meta name="author" content=""> 
+        <link rel="stylesheet" type="text/css" href="./stylesheets/video-page-style.css">
+        
+        <style>
+            body{
+                background-color: #fff;
+                color: #140404;
+            }
+
+            .health-back-btn-display{
+                display: flex;
+                justify-content: space-between;
+                margin-top: 15px;
+            }
+
+            .health-back-btn{
+                align-items: center;
+                color: #3c3c3c;
+                display: flex;
+                text-decoration: none;
+                padding: 10px 0;
+            }
+
+            .health-contact-spprt-btn{
+                align-items: center;
+                color: #3c3c3c;
+                display: flex;
+                text-decoration: none;
+                border: 1px solid #41C0F1;
+                border-radius: 4px;
+                padding: 10px;
+            }
+
+            .question-mark-border{
+                padding: 10px;
+                background: #fff;
+                border: 1px solid #41C0F1;
+                border-radius: 50%;
+                width: 20px;
+                display: flex;
+                height: 20px;
+                justify-content: center;
+                align-items: center;
+                margin-right: 10px;
+            }
+
+            .health-detail-box{
+                border: 1px solid #555796;
+                border-radius: 4px;
+                padding: 10px;
+                margin-top: 10px;
+            }
+
+            .health-patient-detail-text{
+                font-size:20px;
+                font-weight:bold;
+                margin-bottom: 25px;
+            }
+
+            .health-subtext-detail-option{
+                font-size: 16px;
+                margin:13px 0
+            }
+
+            .health-age-number{
+                border: 1px solid #41C0F1;
+                border-radius: 4px;
+                height: 40px;
+                margin-right: 10px;
+                text-align: center;
+            }
+
+            .health-specialty-placeholder{
+                border-radius: 4px;
+                height: 40px;
+                border: none;
+                text-align: center;
+                width: 35%;
+            }
+
+            .health-tell-condition-box{
+                border: 1px solid #D6C6C6;
+                border-radius: 4px;
+                height: 130px;
+                width: 100%;
+                padding: 10px;
+            }
+
+            .health-attach-box{
+                padding: 10px;
+                margin-top: 10px;
+            }
+
+            .add-attach-text{
+                font-size:20px;
+                font-weight:bold;
+                margin-bottom: 15px;
+            }
+
+            .add-report-text{
+                font-size: 14px;
+                color: #909090;
+                width: 70%;
+                line-height: 23px;
+            }
+
+            .attachment-block-bg{
+                background-color: #F0F0F0;
+                cursor: pointer;
+                width: 100%;
+                height: 165px;
+                border-radius: 4px;
+                border: 1px dashed #BCBCBC;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-top: 15px;
+            }
+
+            .health-submit-btn{
+                width: 100%;
+                color: #fff;
+                cursor: pointer;
+                background-color: #41C0F1;
+                border: none;
+                border-radius: 4px;
+                margin-top: 35px;
+                padding: 15px;
+            }
+
+            .before-submit-detail{
+                display:flex;
+                align-items:center;
+                margin-top:15px;
+                justify-content: center;
+            }
+
+            .message-to-doc-text{
+                color:#909090;
+                font-size:14px;
+                margin-left: 10px;
+            }
+
+            .floating-health-sbmit-btn{
+                display: none;
+            }
+
+            /* Custom Radio Button */
+            .radio-toolbar input[type="radio"] {
+                opacity: 0;
+                position: fixed;
+                width: 0;
+            }
+
+            .radio-toolbar label {
+                color: #41C0F1;
+                cursor: pointer;
+                display: inline-block;
+                background-color: #fff;
+                padding: 10px;
+                font-family: sans-serif, Arial;
+                font-size: 16px;
+                border: 1px solid #41C0F1;
+                border-radius: 4px;
+                width: 35%;
+                text-align: center;
+                margin-right: 15px;
+            }
+
+            .radio-toolbar label svg{
+                fill:#cccccc;
+                margin-right:7px
+            }
+
+            .radio-toolbar input[type="radio"]:checked + label {
+                background-color: #41C0F1;
+                border-color: #41C0F1;
+                color: #fff;
+            }
+
+            .radio-toolbar input[type="radio"]:checked + label svg{
+                color: #fff;
+                fill: #fff;
+            }
+
+            /* .radio-toolbar input[type="radio"]:focus + label {
+                border: 1px solid #444;
+            } */
+
+            /* .radio-toolbar label:hover {
+                background-color: #dfd;
+            } */
+
+            @media(max-width: 576px){
+                .health-contact-spprt-btn{
+                    display: none;
+                }
+                .container-padding-custom{
+                    padding: 0;
+                }
+                .padding-0-mobile{
+                    padding: 0;
+                }
+                .row-custom-margin{
+                    margin: 0;
+                }
+                .health-back-btn-display{
+                    padding-left: 10px;
+                }
+                .health-detail-box{
+                    border: unset;
+                }
+
+                .floating-health-sbmit-btn{
+                    background-color: #fff;
+                    bottom: 0;
+                    display: block;
+                    position: fixed;
+                    width: 100%;
+                    z-index: 99;
+                    padding: 15px;
+                }
+                .attachment-block-bg{
+                    margin-bottom: 120px;
+                }
+                .health-submit-btn{
+                    margin-top: unset;
+                }
+            }
+
+        </style>
+        
+    </head>
+
+    <body>
+
+        <!-- start of header -->
+        <!-- start container for header -->
+        <header class="container-fluid header desktop-only">
+            <!-- start a tag for logo -->
+            <a href="#">
+            <picture>
+                <source srcset="https://doccampaign.s3-ap-southeast-1.amazonaws.com/coronavirus/home/doctoroncall-logo-webp.webp" type="image/webp">
+                <img src="https://doccampaign.s3-ap-southeast-1.amazonaws.com/coronavirus/home/doctoroncall-logo-png.png" class="header-logo" alt="DoctorOnCall Logo" loading="lazy">
+            </picture>
+            </a>
+            <!-- end of a tag for logo -->
+        </header>
+        <!-- end of header container -->
+        <!-- end of header -->
+
+        <div class="container container-padding-custom">
+
+            <div class="health-back-btn-display">
+                <a class="health-back-btn" href="#">
+                    <img style="margin-right:10px;width: 20px;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAABmJLR0QA/wD/AP+gvaeTAAAAwklEQVRoge3ZQQrCMBRF0YsK7smtuB87ch+6CNfjIizEgQY6qElLU/NS3oFO238JFPoLZmaWtqs9QAkdcAcOtQdZogPC92o2ZhjRbMxYRHMxqYhmYq7kIwLwAk6VZsyachIB6IFzpRmzHKHCESococIRKhyhQjpizmdnWG2KCi4In8pcjlHlGFWOUeUYVY5RtYkFXTTlZG6Ir0yjVEwzEdFYjPzy+pdhTPGIfcmbZTyAI/Dk86bq//jsVWziZ6iZ2TJvqKlFSv81jt8AAAAASUVORK5CYII=">
+                    Back
+                </a>
+                <a class="health-contact-spprt-btn" href="#">
+                    <div class="question-mark-border">?</div>
+                    Contact Support
+                </a>
+            </div>
+
+            <div class="row row-custom-margin">
+                <div class="col-lg-5 padding-0-mobile">
+                    <!-- Patient Health Detail Section Form -->
+                    <div class="health-detail-box">
+                        <div class="health-patient-detail-text">Patient’s Health Details</div>
+
+                        <div class="health-subtext-detail-option">Who Is the patient?</div>
+                        <div class="radio-toolbar">
+                            <input type="radio" id="myself" name="radioPatient" value="myself" checked>
+                            <label for="myself">Myself</label>
+                        
+                            <input type="radio" id="others" name="radioPatient" value="others">
+                            <label for="others">Others</label>
+                        </div>
+
+                        <div class="health-subtext-detail-option">Age</div>
+                        <input type="number" class="health-age-number"> years old
+
+                        <div class="health-subtext-detail-option">Gender</div>
+                        <div class="radio-toolbar">
+                            <input type="radio" id="radioApple" name="radioFruit" value="apple" checked>
+                            <label for="radioApple">
+                                <svg width="15" height="15" viewBox="0 0 172 172"><g><path d="M0,172v-172h172v172z" fill="none"></path><g><path d="M96.32,13.76v13.76h38.485l-38.1625,38.1625c-8.69406,-6.665 -19.53812,-10.6425 -31.2825,-10.6425c-28.42031,0 -51.6,23.17969 -51.6,51.6c0,28.42031 23.17969,51.6 51.6,51.6c28.42031,0 51.6,-23.17969 51.6,-51.6c0,-11.74437 -3.9775,-22.58844 -10.6425,-31.2825l38.1625,-38.1625v38.485h13.76v-61.92zM65.36,68.8c20.97594,0 37.84,16.86406 37.84,37.84c0,20.97594 -16.86406,37.84 -37.84,37.84c-20.97594,0 -37.84,-16.86406 -37.84,-37.84c0,-20.97594 16.86406,-37.84 37.84,-37.84z"></path></g></g></svg><span>Male</span>
+                            </label>
+                        
+                            <input type="radio" id="radioBanana" name="radioFruit" value="banana">
+                            <label for="radioBanana">
+                                <svg width="15" height="15" viewBox="0 0 172 172"><g><path d="M0,172v-172h172v172z" fill="none"></path><g><path d="M86,3.44c-28.42031,0 -51.6,23.17969 -51.6,51.6c0,26.08219 19.52469,47.79719 44.72,51.17v17.63h-24.08v13.76h24.08v24.08h13.76v-24.08h24.08v-13.76h-24.08v-17.63c25.19531,-3.37281 44.72,-25.08781 44.72,-51.17c0,-28.42031 -23.17969,-51.6 -51.6,-51.6zM86,17.2c20.97594,0 37.84,16.86406 37.84,37.84c0,20.97594 -16.86406,37.84 -37.84,37.84c-20.97594,0 -37.84,-16.86406 -37.84,-37.84c0,-20.97594 16.86406,-37.84 37.84,-37.84z"></path></g></g></svg><span>Female</span>
+                            </label>
+                        </div>
+
+                        <div class="health-subtext-detail-option">Speciality</div>
+                        <input type="text" class="health-specialty-placeholder" placeholder="Paeditrician" disabled>
+
+                        <div class="health-subtext-detail-option">Tell us about your conditions</div>
+                        <textarea class="health-tell-condition-box" placeholder="e.g: I experienced headache and feverish for 2 days."></textarea>
+
+                    </div>
+
+                </div>
+
+                <div class="col-lg-7 padding-0-mobile">
+                    <!-- Patient Add Attachment Block -->
+                    <div class="health-attach-box">
+                        <div class="add-attach-text">Add Attachment (if Any)</div>
+                        <div class="add-report-text">Adding reports and images will help the doctor diagnose better image must not exceed 8mb</div>
+
+                        <div class="attachment-block-bg">                            
+                            <div style="text-align: center;">
+                                <svg viewBox="0 0 172 172" style="fill:#000000;width:30px"><g><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#909090"><path d="M131.365,23.1125c-6.62469,0.3225 -13.2225,3.19813 -18.3825,8.17c-0.1075,0.1075 -0.215,0.215 -0.3225,0.3225c-0.01344,0.01344 -0.09406,-0.01344 -0.1075,0c-0.14781,0.17469 -0.29562,0.34938 -0.43,0.5375c-0.14781,0.17469 -0.29562,0.34938 -0.43,0.5375l-64.715,65.0375c-0.14781,0.17469 -0.29562,0.34938 -0.43,0.5375c-6.08719,6.59781 -5.96625,17.03875 0.43,23.435c6.5575,6.57094 17.5225,6.57094 24.08,0c0.3225,-0.3225 0.60469,-0.68531 0.86,-1.075c0.30906,-0.22844 0.59125,-0.48375 0.86,-0.7525l48.4825,-47.8375c2.16344,-2.0425 2.76813,-5.25406 1.49156,-7.94156c-1.27656,-2.6875 -4.12531,-4.25969 -7.08156,-3.88344c-1.55875,0.20156 -2.99656,0.91375 -4.085,2.0425l-48.4825,47.8375c-0.20156,0.24188 -0.37625,0.48375 -0.5375,0.7525c-0.06719,0.04031 -0.14781,0.06719 -0.215,0.1075c-0.04031,0.06719 -0.06719,0.14781 -0.1075,0.215c-0.34937,0.215 -0.67187,0.47031 -0.9675,0.7525c-1.30344,1.30344 -3.21156,1.31688 -4.515,0c-1.30344,-1.30344 -1.31687,-3.19812 0,-4.515l65.6825,-66.005c0.14781,-0.17469 0.29563,-0.34937 0.43,-0.5375c5.65719,-5.21375 13.20906,-5.17344 17.415,-0.9675c0.29563,0.28219 0.61813,0.5375 0.9675,0.7525c0.04031,0.04031 0.06719,0.06719 0.1075,0.1075c0.20156,0.26875 0.41656,0.52406 0.645,0.7525c3.93719,3.93719 3.27875,12.24156 -2.2575,18.06c-0.1075,0.1075 -0.215,0.215 -0.3225,0.3225l-71.165,72.9925c-0.22844,0.16125 -0.44344,0.34938 -0.645,0.5375c-9.23156,9.23156 -25.12812,10.34688 -33.97,1.505c-8.66719,-8.66719 -7.76687,-24.34875 1.075,-33.6475c0.14781,-0.13437 0.29563,-0.28219 0.43,-0.43l58.5875,-57.9425c2.16344,-2.0425 2.76813,-5.25406 1.49156,-7.94156c-1.27656,-2.6875 -4.12531,-4.25969 -7.08156,-3.88344c-1.55875,0.20156 -2.99656,0.91375 -4.085,2.0425l-58.265,57.62c-0.1075,0.1075 -0.215,0.215 -0.3225,0.3225c-0.14781,0.17469 -0.29562,0.34938 -0.43,0.5375c-13.92125,14.43188 -15.81594,38.3775 -1.1825,52.9975c14.52594,14.52594 38.33719,12.98063 52.7825,-0.7525c0.14781,-0.1075 0.29563,-0.215 0.43,-0.3225c0.04031,-0.04031 0.06719,-0.06719 0.1075,-0.1075c0.06719,-0.06719 0.14781,-0.14781 0.215,-0.215c0,-0.04031 0,-0.06719 0,-0.1075l0.43,-0.43c0.14781,-0.17469 0.29563,-0.34937 0.43,-0.5375l71.0575,-72.5625c0.51063,-0.47031 0.94063,-1.00781 1.29,-1.6125c9.07031,-10.37375 11.04563,-26.14937 1.075,-36.12c-0.17469,-0.14781 -0.34937,-0.29562 -0.5375,-0.43c-0.30906,-0.47031 -0.67187,-0.90031 -1.075,-1.29c-5.07937,-5.07937 -11.91906,-7.32344 -18.705,-6.9875z"></path></g></g></svg>
+                                <br><br>Drop your .png or .jpg files here
+                            </div>
+                        </div>
+
+                        <div class="desktop-only">
+                            <input type="submit" class="health-submit-btn" value="Submit">
+            
+                            <div class="before-submit-detail">
+                                <svg width="20" height="20" viewBox="0 0 172 172" style=" fill:#000000;"><g><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#909090"><path d="M86,0c-21.99099,0 -39.69231,17.70132 -39.69231,39.69231v26.46154c-14.54868,0 -26.46154,11.91286 -26.46154,26.46154v52.92308c0,14.54868 11.91286,26.46154 26.46154,26.46154h79.38462c14.54868,0 26.46154,-11.91286 26.46154,-26.46154v-52.92308c0,-14.54868 -11.91286,-26.46154 -26.46154,-26.46154v-26.46154c0,-21.99099 -17.70132,-39.69231 -39.69231,-39.69231zM86,13.23077c15.06551,0 26.46154,11.39603 26.46154,26.46154v26.46154h-52.92308v-26.46154c0,-15.06551 11.39603,-26.46154 26.46154,-26.46154zM86,99.23077c7.28726,0 13.23077,5.94351 13.23077,13.23077c0,4.6256 -2.63581,9.17368 -6.61538,11.16346v15.29808c0,3.97957 -2.63581,6.61538 -6.61538,6.61538c-3.97956,0 -6.61538,-2.63581 -6.61538,-6.61538v-15.29808c-3.97956,-1.98978 -6.61538,-6.53786 -6.61538,-11.16346c0,-7.28726 5.94351,-13.23077 13.23077,-13.23077z"></path></g></g></svg>
+                                <div class="message-to-doc-text"><i>Message to doctors are 100% private and secure.</i></div>
+                            </div>
+                        </div> 
+                    </div>                    
+                </div>
+            </div>
+
+            <!-- floating button submit for mobile -->
+            <div class="floating-health-sbmit-btn">
+                <input type="submit" class="health-submit-btn" value="Submit">
+
+                <div class="before-submit-detail">
+                    <svg width="20" height="20" viewBox="0 0 172 172" style=" fill:#000000;"><g><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#909090"><path d="M86,0c-21.99099,0 -39.69231,17.70132 -39.69231,39.69231v26.46154c-14.54868,0 -26.46154,11.91286 -26.46154,26.46154v52.92308c0,14.54868 11.91286,26.46154 26.46154,26.46154h79.38462c14.54868,0 26.46154,-11.91286 26.46154,-26.46154v-52.92308c0,-14.54868 -11.91286,-26.46154 -26.46154,-26.46154v-26.46154c0,-21.99099 -17.70132,-39.69231 -39.69231,-39.69231zM86,13.23077c15.06551,0 26.46154,11.39603 26.46154,26.46154v26.46154h-52.92308v-26.46154c0,-15.06551 11.39603,-26.46154 26.46154,-26.46154zM86,99.23077c7.28726,0 13.23077,5.94351 13.23077,13.23077c0,4.6256 -2.63581,9.17368 -6.61538,11.16346v15.29808c0,3.97957 -2.63581,6.61538 -6.61538,6.61538c-3.97956,0 -6.61538,-2.63581 -6.61538,-6.61538v-15.29808c-3.97956,-1.98978 -6.61538,-6.53786 -6.61538,-11.16346c0,-7.28726 5.94351,-13.23077 13.23077,-13.23077z"></path></g></g></svg>
+                    <div class="message-to-doc-text"><i>Message to doctors are 100% private and secure.</i></div>
+                </div>
+            </div>
+
+            <div style="height: 50px;"></div>
+        </div>
+    </body>
+</html>
