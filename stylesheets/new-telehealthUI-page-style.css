@@ -1356,6 +1356,10 @@ ______ ____   ____ _______ ______ _____
 
 @media(max-width: 576px){
 
+  .payment-icon-dflex{
+    margin-bottom: 20px;
+  }
+
   .floating-pay-consult-btn{
       background-color: #fff;
       bottom: 0;
@@ -1375,6 +1379,7 @@ ______ ____   ____ _______ ______ _____
   .payment-block-bg{
       padding: unset;
       margin-top: 10px;
+      margin-bottom: 45px;
   }
   .coupon-code-textfield{
       margin-right: 3%;
