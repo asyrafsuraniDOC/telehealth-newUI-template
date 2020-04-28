@@ -12,307 +12,6 @@
         <meta name="author" content=""> 
         <link rel="stylesheet" type="text/css" href="./stylesheets/video-page-style.css">
         
-        <style>
-            body{
-                background-color: #fff;
-                color: #140404;
-            }
-
-            .health-back-btn-display{
-                display: flex;
-                justify-content: space-between;
-                margin-top: 15px;
-            }
-
-            .health-back-btn{
-                align-items: center;
-                color: #3c3c3c;
-                display: flex;
-                text-decoration: none;
-                padding: 10px 0;
-            }
-
-            .health-contact-spprt-btn{
-                align-items: center;
-                color: #3c3c3c;
-                display: flex;
-                text-decoration: none;
-                border: 1px solid #41C0F1;
-                border-radius: 4px;
-                padding: 10px;
-            }
-
-            .question-mark-border{
-                padding: 10px;
-                background: #fff;
-                border: 1px solid #41C0F1;
-                border-radius: 50%;
-                width: 20px;
-                display: flex;
-                height: 20px;
-                justify-content: center;
-                align-items: center;
-                margin-right: 10px;
-            }
-
-            .pay-consult-btn{
-                width: 100%;
-                color: #fff;
-                cursor: pointer;
-                background-color: #41C0F1;
-                border: none;
-                border-radius: 4px;
-                font-size: 14px;
-                margin-top: 35px;
-                padding: 15px;
-            }
-
-            .floating-pay-consult-btn{
-                display: none;
-            }
-
-            .box-review-bg{
-                border: 1px solid #F0F0F0;
-                border-radius:8px;
-                padding: 15px;
-                margin-top: 10px;
-            }
-            .doctor-dflex-block{
-                display: flex;align-items: center;
-            }
-            .doctor-img-height{
-                width:auto;
-                height:55px;
-            }
-            .img-margin-left{
-                margin-left: 10px;
-            }
-            .dr-desc-review-page{
-                color:#9D9D9D;
-                display: flex;
-                align-items: center;
-                margin-top: 7px;
-            }
-            .grad-icon-desc{
-                width:auto;
-                height:21px;
-                margin-right:10px;
-            }
-            .dr-desc-text-lineheight{
-                margin-top: 10px;
-                line-height: 23px;
-            }
-            .review-detail-text{
-                color: #408BF9;
-                margin-bottom: 5px;
-            }
-            .payment-block-bg{
-                padding: 15px;
-                margin-top: 10px;
-            }
-            .payment-icon-dflex{
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-                margin-bottom: 55px;
-            }
-            .payment-icon-block-details{
-                display: flex;
-                align-items: center;
-            }
-            .payment-icon-img{
-                width: auto;
-                height: 33px;
-                margin-right: 10px;
-            }
-            .payment-icon-text{
-                color:#140404;
-                font-size: 13px;
-                width: 50%;
-            }
-            .coupon-code-textfield{
-                background-color:#F0F0F0;
-                height: 45px;
-                border: none;
-                border-radius: 4px;
-                font-size: 14px;
-                width: 60%;
-                margin-right: 4%;
-                text-indent: 20px;
-            }
-            .apply-code-btn{
-                background-color: #41C0F1;
-                border: none;
-                border-radius: 4px;
-                color: #fff;
-                cursor: pointer;
-                font-size: 14px;
-                text-align: center;
-                text-decoration: none;
-                display: inline-flex;
-                width: 35%;
-                height: 45px;
-                align-items: center;
-                justify-content: center;
-            }   
-            .division-border-top{
-                display: block;
-                border-top: 2px solid #F0F0F0;
-                margin: 20px 0;
-            }  
-            .total-amount-block{
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-                margin-bottom: 30px;
-            }
-            .total-amount-price{
-                font-weight: bold;
-                font-size: 18px;
-            }
-            .term-condition-style{
-                text-decoration: none;
-                color: #41C0F1;
-            } 
-            .question-mark-mobile{
-                display: none;
-            }
-            @media(max-width:992px){
-                .symptom-margin-mobile{
-                    margin-top: 20px;
-                }
-            }
-
-            @media(max-width: 576px){
-                .health-contact-spprt-btn{
-                    display: none;
-                }
-                .health-back-btn-display{
-                    padding-left: 10px;
-                }
-
-                .floating-pay-consult-btn{
-                    background-color: #fff;
-                    bottom: 0;
-                    border-top: 1px solid #D6C6C6;
-                    display: flex;
-                    align-items: center;
-                    justify-content: space-between;
-                    position: fixed;
-                    width: 100%;
-                    z-index: 99;
-                    padding: 15px;
-                }
-                .pay-consult-btn{
-                    margin-top: unset;
-                    width: 50%;
-                }
-                .payment-block-bg{
-                    padding: unset;
-                    margin-top: 10px;
-                }
-                .coupon-code-textfield{
-                    margin-right: 3%;
-                }
-                .payment-icon-text{
-                    font-size: 9px;
-                }
-                .division-border-top{
-                    display: none;
-                }
-                .total-amount-block{
-                    display: none;
-                }                
-                .total-amount-text{
-                    font-size: 11px;
-                    margin-bottom: 10px;
-                }                
-                .question-mark-mobile{
-                    display: flex;
-                    margin: 10px 0;
-                }
-                .payment-icon-img{
-                    height: 26px;
-                }
-            }
-
-            /* Customize Checkbox CSS */
-            /* The container */
-            .checkbox-label {
-                display: block;
-                position: relative;
-                padding-left: 35px;
-                margin-bottom: 12px;
-                cursor: pointer;
-                -webkit-user-select: none;
-                -moz-user-select: none;
-                -ms-user-select: none;
-                user-select: none;
-            }
-
-            /* Hide the browser's default checkbox */
-            .checkbox-label input {
-                position: absolute;
-                opacity: 0;
-                cursor: pointer;
-                height: 0;
-                width: 0;
-            }
-
-            /* Create a custom checkbox */
-            .checkmark {
-                border-radius: 2px;
-                position: absolute;
-                top: 0;
-                left: 0;
-                height: 18px;
-                width: 18px;
-                background-color: #eee;
-            }
-
-            /* On mouse-over, add a grey background color */
-            .checkbox-label:hover input ~ .checkmark {
-                background-color: #ccc;
-            }
-
-            /* When the checkbox is checked, add a blue background */
-            .checkbox-label input:checked ~ .checkmark {
-                background-color: #41C0F1;
-            }
-
-            /* Create the checkmark/indicator (hidden when not checked) */
-            .checkmark:after {
-                content: "";
-                position: absolute;
-                display: none;
-            }
-
-            /* Show the checkmark when checked */
-            .checkbox-label input:checked ~ .checkmark:after {
-                display: block;
-            }
-
-            /* Style the checkmark/indicator */
-            .checkbox-label .checkmark:after {
-                left: 6px;
-                top: 1px;
-                width: 6px;
-                height: 13px;
-                border: solid #fff;
-                border-width: 0px 2px 2px 0px;
-                -webkit-transform: rotate(45deg);
-                -ms-transform: rotate(45deg);
-                transform: rotate(45deg);
-            }
-
-            @media(max-width: 576px){
-                .checkbox-label{
-                    margin: 35px 0;
-                }
-            }
-
-        </style>
-        
     </head>
 
     <body>
@@ -328,6 +27,12 @@
             </picture>
             </a>
             <!-- end of a tag for logo -->
+
+            <a class="health-contact-spprt-btn" href="#">
+                <div class="question-mark-border">?</div>
+                Contact Support
+            </a>
+            <a class="question-mark-border question-mark-mobile" href="#">?</a>
         </header>
         <!-- end of header container -->
         <!-- end of header -->
@@ -337,13 +42,16 @@
             <div class="health-back-btn-display">
                 <a class="health-back-btn" href="#">
                     <img style="margin-right:10px;width: 20px;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAABmJLR0QA/wD/AP+gvaeTAAAAwklEQVRoge3ZQQrCMBRF0YsK7smtuB87ch+6CNfjIizEgQY6qElLU/NS3oFO238JFPoLZmaWtqs9QAkdcAcOtQdZogPC92o2ZhjRbMxYRHMxqYhmYq7kIwLwAk6VZsyachIB6IFzpRmzHKHCESococIRKhyhQjpizmdnWG2KCi4In8pcjlHlGFWOUeUYVY5RtYkFXTTlZG6Ir0yjVEwzEdFYjPzy+pdhTPGIfcmbZTyAI/Dk86bq//jsVWziZ6iZ2TJvqKlFSv81jt8AAAAASUVORK5CYII=">
-                    Back
+                    <div class="back-btn-text-mobiledisplay">Back</div>
                 </a>
-                <a class="health-contact-spprt-btn" href="#">
-                    <div class="question-mark-border">?</div>
-                    Contact Support
-                </a>
-                <div class="question-mark-border question-mark-mobile">?</div>
+                <div class="progress-container">
+                    <div class="progressTrack">
+                    <div class="progressBar" style="width: 100%;"></div>
+                    </div>
+                </div>
+                <div style="font-size: 16px;padding: 10px 0;">
+                    Step 3 of 3
+                </div>
             </div>
 
             <div class="row">
@@ -415,12 +123,12 @@
                             <div class="total-amount-price">RM 19.90</div>
                         </div>
 
-                        <label class="checkbox-label">Yes, I have read and agree to the <a target="_blank" href="https://www.doctoroncall.com.my/termsOfService" class="term-condition-style">Terms and Conditions</a>
+                        <!-- <label class="checkbox-label">Yes, I have read and agree to the <a target="_blank" href="https://www.doctoroncall.com.my/termsOfService" class="term-condition-style">Terms and Conditions</a>
                             <input type="checkbox" checked="checked">
                             <span class="checkmark"></span>
-                        </label>
+                        </label> -->
 
-                        <input type="submit" class="pay-consult-btn desktop-only" value="Pay and Consult Now">
+                        <input onclick="showTnCWindow(true)" type="submit" class="pay-consult-btn desktop-only" value="Pay and Book Now">
 
                     </div>                
                 </div>
@@ -434,7 +142,566 @@
                 <div class="total-amount-text">TOTAL AMOUNT</div>
                 <div class="total-amount-price">RM 19.90</div>
             </div>
-            <input type="submit" class="pay-consult-btn" value="Pay and Consult Now">
+            <input type="submit" onclick="showTnCWindow(true)" class="pay-consult-btn" value="Pay and Book Now">
         </div>
+
+
+
+
+        <!-- start div for popup-->
+        <div class="overlay" id="tncOverlay"></div>
+        <div class="popup" id="tncPopup">
+
+            <!-- start div for content in desktop -->
+            <div class="popup-container" style="background-color: #ffffff">
+            <!--auth form start-->
+                <div class="tnc-form-column">
+                    <div id="form" class="terms-form-padding">
+                        <div id='salutation' class="term-title-text">DoctorOnCall Terms and Conditions</div>
+                        <div id="hideSignInForm">
+                            <div class="terms-bg"><br>                                
+                                <div id="termsdisplay">
+                                    <section class="bmTerms container">
+                                        <ol>
+                                            <li>
+                                                <strong>GENERAL</strong>
+                                                <ul style="list-style: none">
+                                                    <li><strong>1.1.</strong> This document is an electronic record & being generated by a computer system it does not require any physical or digital signatures.</li>
+                                                    <li><strong>1.2.</strong> This document is published to provide the rules and regulations, privacy policy and Terms of Use for access or usage of DoctorOnCall.com.my or the application “DoctorOnCall’. </li>
+                                                    <li><strong>1.3.</strong> The domain name DoctorOnCall.com.my (hereinafter referred to as ‘Website’) and the Mobile Application DoctorOnCall (hereinafter referred to as ‘App’) is owned by Health Digital Technologies SDH BHD (hereinafter referred to as ‘Company’).</li>
+                                                    <li><strong>1.4.</strong> For the purpose of these Terms of Service, wherever the context so requires the term ‘You’/ ‘User’ shall mean any natural or legal person who has downloaded and installed this Mobile Application (hereinafter referred to as ‘App’) and provided Registration Data while registering on the App or by simply visiting the Website by entering the domain name in any internet browser. Any services provided by the Website/App which do not require registration do not absolve You of the contractual relationship established by this Agreement.</li>
+                                                    <ul style="list-style: none">
+                                                        <li><strong>1.4.1.</strong> By downloading and installing this App, You are bound by these Terms of Service and any other binding document as decided by the Company. You are requested to read them carefully before accepting the same and moving forward to using the App.</li>
+                                                        <li><strong>1.4.2.</strong> The term ‘We’/ ‘Us’/ ‘Our’ shall mean DoctorOnCall.com.my and our mobile application DoctorOnCall. The use of this App by You is solely governed by this Terms of Service and any other terms or policies published by Us. Moving past the home page of the Website or downloading the App and using any of the services shall be taken to mean that You have read and agreed to all of the terms and conditions so binding on You as laid down in these terms.</li>
+                                                        <li><strong>1.4.3.</strong> You will be subject to the rules, guidelines, policies, terms, and conditions as applicable to any service that is provided by this App, and they shall be deemed to be incorporated into this Terms of Service and shall be considered as part and parcel of this Terms of Service. We hold the sole right to modify the Terms of Service without prior permission from You or informing You. </li>
+                                                        <li><strong>1.4.4.</strong> This relationship with Us creates on You a duty to periodically check the terms and stay updated with its requirements. If You continue to use the Website/App following such a change, this is deemed as consent by You to the so amended policies by Us. As long as You comply with these Terms of Use, We grant You a personal, non-exclusive, non-transferable, limited privilege to enter and use the App. </li>
+                                                        <li><strong>1.4.5.</strong> Through the Website, Users select a specialty (e.g. Men’s Health). Then the User can either see a Medical professional immediately or Schedule an appointment for later time. The Medical professional will be allocated to the User based on availability. </li>
+                                                        <li><strong>1.4.6.</strong> The User may also upload his medical records and other health related data on the Website/App to support consultation with the Medical professional. These records must be uploaded onto secure DoctorOnCall.com.my platform after successful registration and sign-in in order to remain protected and confidential. We are not liable to any records, data, pictures or documents submitted by any other means such as personal email, mobile, sms or any messaging platform.</li>
+                                                        <li><strong>1.4.7.</strong> This App/Website is also aimed at assisting Medical professionals to provide services to patients that has registered on the App/ Website. The Medical professional who wishes to provide services on the App/ Website has to be verified before joining by providing proper documentation which shall be authenticated by the Company. Only upon authentication and approval shall a Medical Professional be enlisted on the App/ Website. </li>
+                                                        <li><strong>1.4.8.</strong> By impliedly or expressly accepting these Terms of Service, You also accept and agree to be bound by other Company Policies, inter alia the Privacy Policy, which also, would be amended from time to time.</li>
+                                                    </ul>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <strong>MEMBERSHIP/USAGE</strong>
+                                                <ul style="list-style: none">
+                                                    <li><strong>2.1.</strong> The membership/usage of the Website/App is restricted to those above 18 years of age, or to such group that can be termed to have attained 'majority' under the laws of the respective jurisdictions where this Website/App can be seen and is accessible or to emancipated minors, who possess legal parental or guardian consent, or are in a position so as to be fully able and competent to enter into the terms, conditions, obligations, affirmations, representations, and warranties set forth in these Terms of Service, and to abide by and comply with these Terms of Service.</li>
+                                                    <li><strong>2.2.</strong> Further, You are solely responsible for protecting the confidentiality of your username and password and any activity under the account will be deemed to have been done by You. In the case that You provide us with false and inaccurate details, We hold the rights to suspend Your account and/or terminate this Agreement without being held liable for the same.</li>
+                                                    <li><strong>2.3.</strong> You understand the App downloaded on to your phone or tablet is owned by Us and We may automatically upgrade the App and these Terms shall apply to the upgrades as well.</li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <strong>COMMUNICATIONS</strong>
+                                                <ul style="list-style: none;">
+                                                    <li><strong>3.1.</strong> By using this Website/App, it is deemed that You have consented to receiving calls, auto-dialled and/or pre-recorded messages or calls, from Us at any time with the use of the telephone number that has been provided by You for the use of this Website/App, subject to the Privacy Policy. This includes contacting You through information received through other parties as well as contacting other parties through the information You provide to Us.</li>
+                                                    <li><strong>3.2.</strong> The use of this Website/App is also Your consent to receive communications (e.g. SMSes, Emails, etc) from Us at any time We deem fit. This consent to be contacted is for purposes that include and are not limited to clarification calls and marketing communications. In case You wish to stop contact with Us for the same, You may send Us a mail to the effect at contact@doctoroncall.com.my.</li>
+                                                    <li><strong>3.3.</strong> You may also be contacted by Service Providers with whom We have entered into a contract in furtherance of Our rights, duties and obligations under other agreements, contracts and policies followed by Us. Such contact will be made only in pursuance of the respective contracts, agreements and/or policies.</li>
+                                                    <li><strong>3.4.</strong> The sharing of the information provided by You will govern by the Privacy Policy. We will not give out such Your contact information to third parties not connected with the Website/App and the services offered by it, and/or for any purpose not in furtherance of the activities and aims of the Company. Please refer to the 'Privacy Policy' for more information.</li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <strong>PAYMENT</strong>
+                                                <ul style="list-style: none;">
+                                                    <li><strong>4.1.</strong> The installation and use of this Website/App is free of cost and this includes only the usage of certain services of the Website/App. You hereby understand that the free/complimentary services may be amended at anytime in the discretion of the Company.</li>
+                                                    <li><strong>4.2.</strong> However, in the event You use the App/Website for a payable services such as consultation with Medical professional or buying medication, You shall be required to pay for the consult as stated in the payment page at the time of usage and in the event that medication(s) is prescribed by a Medical professional, you shall be required to pay for the medication(s) in the payment page if you would like to procure the medication(s), alongside delivery costs where applicable. However, payment amount stated on the payment page does not reflect the actual price of service for Corporate users. The corporate/organization will be billed accordingly based on agreed commercial arrangement for the use of service.</li>
+                                                    <li><strong>4.3.</strong> For the purpose of this section, Buyer would include any Users choosing to use the services offered on our Website/App. Seller means Us/Website/Company.</li>
+                                                    <li><strong>4.4.</strong> While availing any of the payment method(s) available on the Website/App, We shall not be responsible or assume any liability, whatsoever in respect of any loss or damage arising directly or indirectly to You due to:
+                                                        <ul style="list-style: none;">
+                                                            <li><strong>4.4.1.</strong> Lack of authorization for any transaction(s), or</li>
+                                                            <li><strong>4.4.2.</strong> Exceeding the preset limit mutually agreed by You and ‘Bank(s)’ or financial service provider, or</li>
+                                                            <li><strong>4.4.3.</strong> Any payment issues arising out of the transaction, or</li>
+                                                            <li><strong>4.4.4.</strong> Decline of transaction for any other reason(s)</li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <strong>THIRD PARTY INFORMATION</strong>
+                                                <ul style="list-style: none;">
+                                                    <li><strong>5.1.</strong> The content on the Website/App which includes all text, graphics, user interfaces, visual interfaces, photographs, trademarks, logos, sounds, music, design documents, and artwork is Our content (hereinafter referred to as ‘Content’).</li>
+                                                    <li><strong>5.2.</strong> The Website/App may contain links to/ content of third party websites that are not associated with us. We have no control over any third party user generated content as We are merely an intermediary for the purposes of those content. </li>
+                                                    <li><strong>5.3.</strong> In the event, if any of the Third Party Content infringes any Intellectual Property of any person, the Third Party shall be solely responsible for any loss caused and We shall not be liable. You may send as an email contact@doctoroncall.com.my com to report any such content. </li>
+                                                    <li><strong>5.4.</strong> Other than when expressly allowed, any use of Our Content and it being reproduced, republished, uploaded, posted, publicly displayed, encoded, translated, transmitted or distributed in any way (including "mirroring") to any other computer, server, website or other medium for publication or distribution or for any commercial enterprise, without Our express prior written consent is not allowed.</li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <strong>USER CONTENT</strong>
+                                                <ul style="list-style: none;">
+                                                    <li><strong>6.1.</strong> The content that You upload or post will become Our property and You grant Us the worldwide, perpetual and transferable rights in such Content. We shall be entitled to, consistent with Our Privacy Policy as adopted in accordance with applicable law, use the Content or any of its elements for any type of use forever, including but not limited to promotional and advertising purposes and in any media whether now known or hereafter devised, including the creation of derivative works that may include any content You provide and are not entitled to any payment or other compensation for such use. You also grant Us the right to sub-license these rights, and the right to bring an action for infringement of these rights. We reserve the right to edit or remove any material submitted to this Website/App, or stored on Our servers, or hosted or published upon this Website/App.</li>
+                                                    <li><strong>6.2.</strong> Those posting any form of User content on the Website/App must verify the truthfulness and authenticity of the particulars of the content, including the time, place and nature. Before allowing such content to be posted on the Website/App, We have the right and authority to verify the accuracy of such particulars related to the content with the respective sources provided by the User posting such content, if We feel that there is a need to check such accuracy. </li>
+                                                    <li><strong>6.3.</strong> We have the right to upload content on behalf of third parties, subsequent to collecting such information and verifying it if we deem it necessary. Notwithstanding this, We can in no way be held liable for any false or misleading information. </li>
+                                                    <li><strong>6.4.</strong> In case any content is considered to be unlawful or against the law within any jurisdiction in which Our Website/App can be seen and accessed, it shall be removed forthwith by Us on being intimated by the authorities of the respective jurisdiction that such content is deemed unlawful. We cannot be held liable or questioned for the same.</li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <strong>USER OBLIGATIONS</strong>
+                                                <ul style="list-style: none;">
+                                                    <li><strong>7.1.</strong> You are a restricted user of this Website/App.</li>
+                                                    <li><strong>7.2.</strong> You are bound not to cut, copy, distribute, modify, recreate, reverse engineer, distribute, disseminate, post, publish or create derivative works from, transfer, or sell any information or software obtained from the Website/App. </li>
+                                                    <li><strong>7.3.</strong> With Our prior permission limited use may be allowed. For the removal of doubt, it is clarified that unlimited or wholesale reproduction, copying of the content for commercial or noncommercial purposes and unwarranted modification of data and information within the content of the Website/App is not permitted. </li>
+                                                    <li><strong>7.4.</strong> You shall not, nor allow third parties on Your behalf to (i) make and distribute copies of the Website/App (ii) attempt to copy, reproduce, alter, modify, reverse engineer, disassemble, decompile, transfer, exchange or translate the Website/App; or (iii) create derivative works of the Website/App of any kind whatsoever.</li>
+                                                    <li><strong>7.5.</strong> You agree not to access (or attempt to access) the Website/App and/or the materials or Services by any means other than through the interface that is provided by the Website/App. </li>
+                                                    <li><strong>7.6.</strong> The use of deep-link, robot, spider or other automatic device, program, algorithm or methodology, or any similar or equivalent manual process, to access, acquire, copy or monitor any portion of the Website/App or Content, or in any way reproduce or circumvent the navigational structure or presentation of the Website/App, materials or any Content, to obtain or attempt to obtain any materials, documents or information through any means not specifically made available through the Website/App. </li>
+                                                    <li><strong>7.7.</strong> You acknowledge and agree that by accessing or using the Website/App or Services, You may be exposed to content from other users that You may consider offensive, indecent or otherwise objectionable. </li>
+                                                    <li><strong>7.8.</strong> We disclaim all liabilities arising in relation to such offensive content on the Website/App. Further, You may report such offensive content by sending us an e-mail to contact@doctoroncall.com.my.  </li>
+                                                    <li>
+                                                        <strong>7.9.</strong> This Website/App by nature allows you to upload information; You undertake to ensure that such material is in accordance with applicable laws. Further, You undertake not to:
+                                                        <ul style="list-style: none;">
+                                                            <li><strong>7.9.1.</strong> Abuse, harass, threaten, defame, disillusion, erode, abrogate, demean or otherwise violate the legal rights of others;</li>
+                                                            <li><strong>7.9.2.</strong> Engage in any activity that interferes with or disrupts access to the Website/App or the Services (or the servers and networks which are connected to the Website/App);</li>
+                                                            <li><strong>7.9.3.</strong> Impersonate any person or entity, or falsely state or otherwise misrepresent Your affiliation with a person or entity;</li>
+                                                            <li><strong>7.9.4.</strong> Publish, post, disseminate, any information which is grossly harmful, harassing, blasphemous, defamatory, obscene, pornographic, paedophilic, libellous, invasive of another's privacy, hateful, or racially, ethnically objectionable, disparaging, relating or encouraging money laundering or gambling, or otherwise unlawful in any manner whatever; or unlawfully threatening or unlawfully harassing;</li>
+                                                            <li><strong>7.9.5.</strong> Post any file that infringes the copyright, patent or trademark of other legal entities.</li>
+                                                            <li><strong>7.9.6.</strong> Upload or distribute files that contain viruses, corrupted files, or any other similar software or programs that may damage the operation of the Website/App or another's computer;</li>
+                                                            <li><strong>7.9.7.</strong> Download any file posted by another user of a Service that you know, or reasonably should know, cannot be legally distributed in such manner;</li>
+                                                            <li><strong>7.9.8.</strong> Probe, scan or test the vulnerability of the Website/App or any network connected to the Website/App, nor breach the security or authentication measures on the Website/App or any network connected to the Website/App. You may not reverse look-up, trace or seek to trace any information on any other user, of or visitor to, the Website/App, or any other customer of the Website/App, including any account not owned by You, to its source, or exploit the Website/App or Service or information made available or offered by or through the Website/App, in any way whether or not the purpose is to reveal any information, including but not limited to personal identification information, other than Your own information, as provided for by the Website/App;;</li>
+                                                            <li><strong>7.9.9.</strong> Disrupt or interfere with the security of, or otherwise cause harm to, the Website/App, systems resources, accounts, passwords, servers or networks connected to or accessible through the Website/App or any affiliated or linked sites;</li>
+                                                            <li><strong>7.9.10.</strong> Collect or store data about other users in connection with the prohibited conduct and activities set forth in this Section.</li>
+                                                            <li><strong>7.9.11.</strong> Use the Website/App or any material or Content for any purpose that is unlawful or prohibited by these Terms of Service, or to solicit the performance of any illegal activity or other activity which infringes the rights of this Website/App or other third parties;</li>
+                                                            <li><strong>7.9.12.</strong> Violate any code of conduct or other guidelines, which may be applicable for or to any particular Service;</li>
+                                                            <li><strong>7.9.13.</strong> Violate any applicable laws or regulations for the time being in force within or outside Malaysia;</li>
+                                                            <li><strong>7.9.14.</strong> Violate the Terms of Service including but not limited to any applicable Additional Terms of the Website/App contained herein or elsewhere;</li>
+                                                            <li><strong>7.9.15.</strong> Violate any code of conduct or other guidelines, which may be applicable for or to any particular Service;</li>
+                                                            <li><strong>7.9.16.</strong> Threaten the unity, integrity, defence, security or sovereignty of Malaysia, friendly relations with foreign states, or public order or causes incitement to the commission of any cognizable offence or prevents investigation of any offence or is insulting any other nation.</li>
+                                                            <li><strong>7.9.17.</strong> Publish, post, disseminate information that is false, inaccurate or misleading; violate any applicable laws or regulations for the time being in force in or outside Malaysia;</li>
+                                                            <li><strong>7.9.18.</strong> Directly or indirectly, offer, attempt to offer, trade or attempt to trade in any item, the dealing of which is prohibited or restricted in any manner under the provisions of any applicable law, rule, regulation or guideline for the time being in force.</li>
+                                                            <li><strong>7.9.19.</strong>
+                                                                Create liability for Us or cause Us to lose (in whole or in part) the services of Our internet service provider ("ISPs") or other suppliers;</li>
+                                                        </ul>
+                                                    </li>
+                                                    <li><strong>7.10.</strong> While We shall not be held liable or answerable to Users for any such acts on Your part, violation of this clause would lead to potential criminal legal action against You, either by other Users of the Website or by Us. We can (and You hereby expressly authorize Us to) disclose any information about You to law enforcement or other government officials, as We, in Our sole discretion, believe necessary or appropriate in connection with the investigation and/or resolution of possible crimes, especially those that may involve personal injury. </li>
+                                                    <li><strong>7.11.</strong> You understand that We have the right at all times to disclose any information (including the identity of the persons providing information or materials on the Website/App) as necessary to satisfy any law, regulation or valid governmental request. This may include, without limitation, disclosure of the information in connection with investigation of alleged illegal activity or solicitation of illegal activity or in response to a lawful court order or subpoena. </li>
+                                                    <li><strong>7.12.</strong> We have no obligation, to monitor the material posted on the Website/App. We shall have the right to remove or edit any content that in its sole discretion violates, or is alleged to violate, any applicable law or either the spirit or letter of these Terms of Service. Notwithstanding this right, YOU REMAIN SOLELY RESPONSIBLE FOR THE CONTENT OF THE MATERIALS YOU POST ON THE WEBSITE/APP. </li>
+                                                    <li><strong>7.13.</strong> In no event shall We assume or have any responsibility or liability for any Content posted or for any claims, damages or losses resulting from use of Content and/or appearance of Content on the App.</li>
+                                                    <li><strong>7.14.</strong> You hereby represent and warrant that You have all necessary rights in and to all Content which You provide and all information it contains and that such Content shall not infringe any proprietary or other rights of third parties or contain any libelous, tortuous, or otherwise unlawful information.</li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <strong>CANCELLATIONS AND REFUNDS</strong>
+                                                <ul style="list-style: none;">
+                                                    <li><strong>8.1.</strong> The Website/App shall be only an intermediary connecting the User with the Medical professional of the service booked. Once the appointment has been made and a confirmation has been given to the User, the Company shall inform the Medical professional who shall render the consult at the agreed time, location and mode provided at the time of booking the service. This includes procurement of medication(s) prescribed by a Medical professional and subsequent medication(s) delivery to User as well.</li>
+                                                    <li><strong>8.2.</strong> Once an appointment has made and it is confirmed at Our end, no amount shall be refunded, in the event of a cancellation initiated by the User. In the event that medication(s) is prescribed by a Medical professional and User decides to procure the medication(s) and the order is confirmed at Our end, no amount shall be refunded, in the event of a cancellation initiated by the User.</li>
+                                                    <li><strong>8.3.</strong> However, in certain circumstances, the Company at its discretion shall permit a refund of the full or partial amount if the Medical professional becomes unavailable, if an alternative Medical professional is arranged to consult or no suitable medication(s) substitute is available for dispensation (including delivery costs where applicable). The decision of the Company shall be final in such cases.</li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <strong>LOCATION</strong>
+                                                <ul style="list-style: none;">
+                                                    <li><strong>9.1.</strong> Currently We provide chat, phone call, video call and medication delivery services in Malaysia. While we can receive consultation request from any location worldwide, we can only deliver medication to Malaysia for the time being</li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <strong>DISCLAIMERS</strong>
+                                                <ul style="list-style: none;">
+                                                    <li><strong>10.1.</strong> You understand that the Website/App is a platform that Users utilize to locate Medical professionals and make appointments for chat, phone or video consult. Even though We take all the necessary steps to verify the authenticity of the Medical professionals, You understand that We shall not be liable for any deficiencies including but not limited to misconduct, injury caused or lack of knowledge from the end of the Medical professional. We are not a party to such interaction and take no liability that arises from any such acts of the Medical professional.</li>
+                                                    <li><strong>10.2. Healthcare Services</strong>
+                                                        <ul style="list-style: none;">
+                                                            <li><strong>10.2.1.</strong> All of the Medical professional who deliver Services through DoctorOnCall are independent Medical professionals solely responsible for the services each provides to you. </li>
+                                                            <li><strong>10.2.2.</strong> DoctorOnCall does not practice medicine or any other licensed profession, and does not interfere with the practice of medicine or any other licensed profession by Medical professional, each of whom is responsible for his or her services and compliance with the requirements applicable to his or her profession and license.</li>
+                                                            <li><strong>10.2.3.</strong> Neither DoctorOnCall nor any third parties who promote the Services or provide you with a link to the Service shall be liable for any professional advice you obtain from a Medical professional via the Services.</li>
+                                                        </ul>
+                                                    </li>
+                                                    <li><strong>10.3. Informed Consent:</strong>
+                                                        <ul style="list-style: none;">
+                                                            <li><strong>10.3.1.</strong> DoctorOnCall provides a platform to deliver health care services using interactive audio and video technology, where the patient and the medical professional are not in the same physical location. During your telehealth consultation with a medical professional, details of your health history and personal health information may be discussed with you through the use of interactive video, audio and other telecommunications technology, and your medical professional may perform a physical examination through these technologies</li>
+                                                            <li><strong>10.3.2.</strong> The telehealth Services you receive from Medical Professional are not intended to replace a primary care physician relationship or be your permanent medical home.</li>
+                                                            <li><strong>10.3.3.</strong> You should seek emergency help or follow-up care when recommended by a Medical Professional or when otherwise needed, and continue to consult with your primary care physician and other medical professionals as recommended.</li>
+                                                            <li><strong>10.3.4.</strong> You will have direct access to customer support services to follow up on medication reactions, side effects or other adverse events.</li>
+                                                            <li><strong>10.3.5.</strong> Among the benefits of our Services are improved access to healthcare professionals and convenience. However, as with any health service, there are potential risks associated with the use of telehealth. These risks include, but may not be limited to:
+                                                                <ul style="list-style: none;">
+                                                                    <li><strong>10.3.5.1.</strong> In rare cases, information transmitted may not be sufficient (e.g. poor resolution of images) to allow for appropriate health care decision making by the Medical Professional;</li>
+                                                                    <li><strong>10.3.5.2.</strong>Delays in evaluation or treatment could occur due to failures of the electronic equipment. If this happens, you may be contacted by phone or other means of communication.</li>
+                                                                    <li><strong>10.3.5.3.</strong>In rare cases, a lack of access to all of your health records may result in adverse drug interactions or allergic reactions or other judgment errors;</li>
+                                                                    <li><strong>10.3.5.4.</strong>Although the electronic systems we use will incorporate network and software security protocols to protect the privacy and security of health information, in rare instances, security protocols could fail, causing a breach of privacy of personal health information</li>
+                                                                </ul>
+                                                            </li>
+                                                            <li><strong>10.3.6</strong> By accepting these Terms of Use, you acknowledge that you understand and agree with the following:
+                                                                <ul style="list-style: none;">
+                                                                    <li><strong>10.3.6.1.</strong> You understand that you may expect the anticipated benefits from the use of telehealth in your care, but that no results can be guaranteed or assured.</li>
+                                                                    <li><strong>10.3.6.2.</strong> You understand that the laws that protect the privacy and security of health information apply to telehealth, and have received DoctorOnCall’s Notice of Privacy Practices, which describes these protections in more detail.</li>
+                                                                    <li><strong>10.3.6.3.</strong> Electronic communications are directed to your Medical Professional (s) and their supervisees through a secure, encrypted video interface and electronic health record.</li>
+                                                                    <li><strong>10.3.6.4.</strong> Your Medical Professional may determine that the Services are not appropriate for some or all of your treatment needs, and accordingly may elect not to provide telehealth services to you through the Site.</li>
+                                                                </ul>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li><strong>10.4.</strong> All communication between the Medical professional and You is a separate transaction which includes without any limitation all warranties related to consult and after consult services related to consult. We do not have any control over such information and play no determinative role in the finalization of the same and hence do not stand liable for the outcomes of such communication.</li>
+                                                    <li><strong>10.5.</strong> We will ensure that all Medical Professionals providing audio/video consultation and e-prescription are fully qualified and registered with the Malaysia Medical Council (MMC) and in possession of valid Annual Practicing Certificate (APC)</li>
+                                                    <li><strong>10.6.</strong> For complimentary chat service, most inquiries and basic chats will be handled by our patient care consultants. Patient care consultants are tasked to answer your basic questions for screening purposes before proceeding to medical consultation with the Medical Professional. Any information provided by the patient care consultant should not be deemed as medical advice. </li>
+                                                    <li><strong>10.7.</strong> We do not endorse any specific Medical professional on the App nor place any guarantee as to its quality and value. Any such recommendations that are done are done by other users and the Company does not verify or acknowledge the same.</li>
+                                                    <li><strong>10.8.</strong> Further We may suggest apt treatments or services in accordance with the/ your information within our knowledge but We do not guarantee any effectiveness or success upon using these services.</li>
+                                                    <li><strong>10.9.</strong> Subject to the above sub-clauses, a contract exists between the Medical professional and You and as such any breach of contract and thus, any claim arising from such breach is the subject matter of the Medical professional and You alone and We are in no way a party to such breach or involved in any suit arising from the same breach.</li>
+                                                    <li><strong>10.10.</strong> The content on the Website and App is general in nature and summarized, and is provided for informational purposes only. The content of the Website and App, including without limitation, text, copy, audio, video, photographs, illustrations, graphics and other visuals, is for informational purposes only and does not constitute professional advice, or recommendations of any kind. </li>
+                                                    <li><strong>10.11.</strong> Reliance on any content provided on website/app or any links on DoctorOnCall website/app is solely at your own risk. We reserve the right to change or discontinue, at any time, any aspect or feature of this website/app.</li>
+                                                    <li><strong>10.12.</strong> You do hereby grant Us a non-exclusive, worldwide, perpetual, irrevocable, royalty- free, sub-licensable right to exercise the copyright, publicity, and database rights you have in Your information, in any media now known or not currently known, with respect to Your information to enable Us to use the information for the purpose of providing the Services</li>
+                                                    <li><strong>10.13.</strong> You do hereby unconditionally and irrevocably agree to give consent to Us to collect, hold, use, delete, disclose, transfer, administer, store and process (within or outside Malaysia) in any other way, all your personal data (including sensitive personal data and personal data of other party provided by you) given now or that is subsequently obtained from time to time, which may include but not limited to your name, NRIC number/Passport number, contact information, medical related information for our internal use and records.</li>
+                                                    <li><strong>10.14.</strong> You do hereby unconditionally and irrevocably agree to give consent to Us to disclose and release your personal data to third party service providers, agents and other organisations we have engaged to perform any of the functions and services for you.</li>
+                                                    <li><strong>10.15.</strong> You do hereby unconditionally and irrevocably agree to give consent to Us to disclose and release your personal data for any purpose required by law or regulations.</li>
+                                                    <li><strong>10.16.</strong> You release and indemnify Us and/or any of its officers and representatives from any cost, damage, liability or other consequence of any of the actions of the Users of the Website/App and specifically waive any claims that You may have in this behalf under any applicable law. Please note that there could be risks in dealing with underage persons or people acting under false pretense.</li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <strong>COMPLIANCE WITH LAWS</strong>
+                                                <ul style="list-style: none;">
+                                                    <li><strong>11.1.</strong> The User of the Website/App shall comply with all the applicable laws applicable to them respectively for using Payment Facility and the website</li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <strong>DISCLAIMER OF WARRANTIES AND LIABILITIES</strong>
+                                                <ul style="list-style: none;">
+                                                    <li><strong>12.1.</strong>You expressly understand and agree that, to the maximum extent permitted by applicable law:
+                                                        <ul style="list-style: none;">
+                                                            <li><strong>12.1.1.</strong> the website, services and other materials are provided by this website is on an "as is" basis without warranty of any kind, express, implied, statutory or otherwise, including the implied warranties of title, non-infringement, merchantability or fitness for a particular purpose. Without limiting the foregoing, we make no warranty that:
+                                                                <ul style="list-style: none;">
+                                                                    <li><strong>12.1.1.1.</strong> Your requirements will be met or that services provided will be uninterrupted, timely, secure or error-free;</li>
+                                                                    <li><strong>12.1.1.2.</strong> Materials, information obtained and results will be effective, accurate or reliable;</li>
+                                                                    <li><strong>12.1.1.3.</strong> Any errors or defects in the website, services or other materials will be corrected</li>
+                                                                </ul>
+                                                            </li>
+                                                            <li>
+                                                                <strong>12.1.2.</strong> we will have no liability related to user content arising under intellectual property rights, libel, privacy, publicity, obscenity or other laws. We also disclaim all liability with respect to the misuse, loss, modification or unavailability of any user content.
+                                                            </li>
+                                                            <li><strong>12.1.3.</strong> The user understands and agrees that any material or data downloaded or otherwise obtained through the website is done entirely at their own discretion and risk and they will be solely responsible for any damage to their computer systems or loss of data that results from the download of such material or data.</li>
+                                                            <li><strong>12.1.4.</strong> We are not responsible for any typographical error leading to an invalid coupon. We accept no liability for any errors or omissions, with respect to any information provided to you whether on behalf of itself or third parties </li>
+                                                            <li><strong>12.1.5.</strong> we shall not be liable for any third party product or services.</li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li><strong>INDEMNIFICATION AND LIMITATION OF LIABILITY</strong>
+                                                <ul style="list-style: none;">
+                                                    <li><strong>13.1.</strong> You agree to indemnify, defend and hold harmless this website including but not limited to its affiliate vendors, agents and employees from and against any and all losses, liabilities, claims, damages, demands, costs and expenses (including legal fees and disbursements in connection therewith and interest chargeable thereon) asserted against or incurred by us that arise out of, result from, or may be payable by virtue of, any breach or non-performance of any representation, warranty, covenant or agreement made or obligation to be performed by you pursuant to these terms of use. </li>
+                                                    <li><strong>13.2.</strong> Further, you agree to hold us harmless against any claims made by any third party due to, or arising out of, or in connection with, your use of the website, any claim that your material caused damage to a third party, your violation of the terms of service, or your violation of any rights of another, including any intellectual property rights
+                                                        in no event shall we, or our officers, directors, employees, partners or suppliers be liable to you or any third party for any special, incidental, indirect, consequential or punitive damages whatsoever, including those resulting from loss of use, data or profits, whether or not foreseeable or whether or not we have been advised of the possibility of such damages, or based on any theory of liability, including breach of contract or warranty, negligence or other tortious action, or any other claim arising out of or in connection with your use of or access to the website, services or materials.</li>
+                                                    <li><strong>13.3.</strong> The limitations and exclusions in this section apply to the maximum extent permitted by applicable law.</li>
+                                                </ul>
+                                            </li>
+                                            <li><strong>SEVERABILITY</strong>
+                                                <ul style="list-style: none;">
+                                                    <li><strong>14.1.</strong> If a provision of these terms and conditions is determined by any court or other competent authority to be unlawful and/or unenforceable, the other provisions will continue in effect. If any unlawful and/or unenforceable provision would be lawful or enforceable if part of it were deleted, that part will be deemed to be deleted, and the rest of the provision will continue in effect.</li>
+                                                </ul>
+                                            </li>
+                                            <li><strong>BREACHES OF THESE TERMS AND CONDITIONS</strong>
+                                                <ul style="list-style: none;">
+                                                    <li><strong>15.1.</strong> Without prejudice to our other rights under these Terms of Use, Your rights under the Agreement may automatically terminate without notice if You fail to comply with its terms. If You do not comply with the terms, We have the right to take any action We deem appropriate. We may terminate the Agreement or restrict, suspend or terminate Your access to the website or Your use of the Service at Our discretion without notice at any time and/or bringing court proceedings against You, including if We determine that Your use violates the Agreement, is improper, substantially exceeds or differs from normal use by other users, or otherwise involves fraud or misuse of the Service or harms our interests or those of another user of the Service or of a Third Party.</li>
+                                                </ul>
+                                            </li>
+                                            <li><strong>NO WAIVER</strong>
+                                                <ul style="list-style: none;">
+                                                    <li><strong>16.1.</strong> Our failure to insist upon or enforce your strict compliance with the Agreement will not constitute a waiver of any of our rights.</li>
+                                                </ul>
+                                            </li>
+                                            <li><strong>DISPUTE RESOLUTION</strong>
+                                                <ul style="list-style: none;">
+                                                    <li><strong>17.1.</strong> These Terms of Service will be governed by and construed in accordance with the laws of Malaysia without regard to its conflicts of law provisions. Any failure of the Website/App/ Company to enforce or exercise any provision of this Agreement or related right shall not constitute a waiver of that right or provision. The section titles used in this Agreement are purely for convenience and carry with them no legal or contractual effect. In the event of termination of this Agreement for any reason, you agree the following provisions will survive: the provisions regarding limitations on your use of Content, the license(s) you have granted to the Website/App/Company, and all other provisions for which survival is equitable or appropriate </li>
+                                                    <li><strong>17.2.</strong> In the case of a conflict between these terms and the terms of any electronic or machine readable statement or policy, these Terms of Service shall control. Similarly, in case of a conflict between these terms and our Privacy Policy, these Terms of Service shall control. </li>
+                                                    <li><strong>17.3.</strong> The Parties expressly agree that the Terms, Policy and any other agreements entered into between the Parties are governed by the laws, rules and regulations of Malaysia, and shall have exclusive jurisdiction over any disputes arising between the Parties</li>
+                                                </ul>
+                                            </li>
+                                            <li><strong>MISCELLANEOUS</strong>
+                                                <ul style="list-style: none;">
+                                                    <li><strong>18.1.</strong> We reserve the right to change these Terms of Service at any time in its discretion and to notify users of any such changes solely by changing this Terms of Service. Your continued use of the Website/App after the posting of any amended Terms of Service shall constitute your agreement to be bound by any such changes.</li>
+                                                    <li><strong>18.2.</strong> Your use of this Website/App prior to the time this Terms of Service was posted will be governed according to the Terms of Service that applied at the time of your use.
+                                                        We may modify, suspend, discontinue or restrict the use of any portion, including the availability of any portion of the Content at any time, without notice or liability.</li>
+                                                    <li><strong>18.3.</strong> We may deny access to any person or user at any time for any reason. In addition, we may at any time transfer rights and obligations under this Agreement to any affiliate, subsidiary or business unit, or any of their affiliated companies or divisions, or any entity that acquires Us or any of their assets. </li>
+                                                    <li><strong>18.4</strong> We hereby reserve the right to block usage of the Website/App if any breach of the Terms of Service is caused by a User. This can in no way be construed as a waiver of any legal right under Malaysian law to claims any damages or initiate any legal proceedings against the User.</li>
+                                                </ul>
+                                            </li>
+                                        </ol>
+                        
+                                        <hr>
+                                        <p>By using <a href="https://www.doctoroncall.com.my">https://www.doctoroncall.com.my</a>, you have acknowledged that you have read, understood, and taken steps to consider the effects of this agreement, you also agree to be bound by the terms and conditions of this agreement, and you are eligible to sign this Agreement.</p>
+                                        <p>In the event of any conflict between the version in English and other language versions, the English version shall prevail.</p>
+                                        <p>Last Updated: 14 Feb 2020</p>
+                                    </section> 
+                                </div>                                
+                            </div>
+                            
+                        </div> 
+                        <div style="display: flex;justify-content: flex-end;margin-top: 20px;">
+                            <a class="cancel-btn" onclick="closeTnCPopup()">CANCEL</a>
+                            <a id="TnCbutton" class="proceed-now-btn" onclick="">I AGREE</a>
+                        </div>                           
+                    </div>
+                </div>
+            <!--End of auth form-->
+            </div>
+
+        </div>
+        <!-- end div for popup-->
+
+        <style>
+            /* table of content */
+            /*
+            1. overlay after popup showed on page
+            2. overall popup
+            3. popup container
+            4. Style for countdown timer
+            */
+
+            /* 1. overlay after popup showed on page */
+
+            .terms-bg{
+                height: 390px;
+                overflow: scroll;
+                margin-top: 10px;
+            }
+
+            .proceed-now-btn{
+                background-color: #41C0F1;
+                border: none;
+                border-radius: 4px;
+                color: #fff;
+                display: flex;
+                align-items: center;
+                font-size: 14px;
+                padding: 10px;
+                margin: 10px 5px;
+                text-decoration: none;
+                text-align: center;
+                width: max-content;
+                height: 46px;
+            }
+
+            .cancel-btn{
+                background-color: #fff;
+                border: none;
+                border-radius: 4px;
+                color: #4A4A4A;
+                display: flex;
+                align-items: center;
+                font-size: 14px;
+                padding: 10px;
+                margin: 10px 5px;
+                text-decoration: none;
+                text-align: center;
+                width: max-content;
+                height: 46px;
+            }
+
+            .overlay{
+                background-color: #000;
+                display: none;
+                height: 100%;
+                left: 0;
+                position: fixed;
+                opacity: 0.7;
+                top: 0;
+                width: 100%;
+                z-index: 10000;
+            }
+
+            /* 2. overall popup */
+            .popup {
+                border-radius: 5px;
+                display: none;
+                opacity: 0;
+                position: fixed;
+                text-align: center;
+                top: 10%;
+                width: 100%;
+                z-index: 10000;
+            }
+
+            /* 3. popup container */
+            .popup-container {
+                /* background-repeat: no-repeat; */
+                background-size: 100% 100%;
+                /* border-radius: 5px; */
+                display: inline-block;
+                width: 888px;
+                height: 591px;
+            }
+
+            .popup-close-icon {
+                align-items: center;
+                background-color: #eee;
+                border-radius: 25px;
+                color: #fff;
+                cursor: pointer;
+                display: flex;
+                float: right;
+                height: 25px;
+                justify-content: center;
+                margin: -12px;
+                width: 25px;
+                z-index: 10000;
+            }
+
+            .popup-close-icon svg {
+                width: 16px;
+            }
+
+            .tnc-form-column{
+                /* margin: 8px;               */
+                width:100%;
+            }
+            .terms-form-padding{
+                padding: 40px;
+            }
+            @media (max-width:768px){
+                .popup-container {
+                    width: 615px;
+                    height: 600px;
+                }
+            }
+            @media (max-width:576px){
+                .terms-bg{
+                    /* height: 350px; */
+                }
+                .terms-form-padding{
+                    padding: unset;
+                }
+                .popup-close-icon {
+                    margin: 10px;
+                }
+                .popup-container {
+                    /* width: 320px;
+                    height: 500px; */
+                    border-radius: unset;
+                    position: fixed;
+                    bottom: 0;
+                    width: 100%;
+                    height: 100%;
+                    display: block;
+                }
+                .popup-container-mobile {
+                    /* background-repeat: no-repeat; */
+                    background-size: 100% 100%;
+                    border-radius: 5px;
+                    display: inline-block;
+                    height: 325px;
+                    width: 65%;
+                }
+                .popup {
+                    top: 12%;
+                }
+                .tnc-form-column{
+                    padding: 70px 20px;
+                    width:100%;
+                    /* margin-top: -20px; */
+                }
+            }
+
+            @media(max-width: 320px){
+                .terms-form-padding{
+                    margin-top: 0;
+                }
+                .term-scroll-text{
+                    white-space: unset
+                }
+                /* .popup-container {
+                    width: 285px;
+                    height: 435px;
+                } */
+                .popup-container-mobile {
+                    width: 75%;
+                }
+                .tnc-form-column{
+                    padding: 12px 15px;
+                }
+            }
+
+            .term-title-text{
+                /* color:#2E5AA9; */
+                font-size: 28px;
+                line-height: 40px;
+                margin-top: -5px;
+                text-align: left;
+                /* white-space: nowrap; */
+            }
+            .term-scroll-text{
+                color:#3c3c3c;
+                font-size:14px;
+                line-height: 23px;
+            }
+            .login-division-border{
+                background: #ebebeb;
+                border: 0.5px solid #ebebeb;
+                margin-bottom: 15px;
+                margin-top: 15px;
+            }
+            .tnc-form-smalltext{
+                color:#3c3c3c;
+                font-size:12px;
+                line-height: 23px;
+                margin-bottom: 5px;
+                text-align: left;
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+            .term-scroll-textfield{
+                background-color: #ebebeb;
+                border: none;
+                border-radius:4px;
+                height: 40px;
+                margin-bottom: 15px;
+                text-indent: 15px;
+                width: 100%;
+            }
+            .term-scroll-textfield{
+                background-color: #ebebeb;
+                border: none;
+                border-radius:4px;
+                height: 40px;
+                margin-bottom: 15px;
+                text-indent: 15px;
+                width: 100%;
+            }
+
+            .bmTerms{
+                font-size: 14px;
+                text-align: left;
+                line-height: 23px;
+            }
+
+            ol,ul{
+                list-style-position: inside;
+                padding-left: 0;
+            }
+        </style>
+
+        <script type="text/javascript">
+
+            function showTnCWindow(show) {
+
+                if(show){
+                    document.getElementById("tncPopup").style.display = "block";
+                    document.getElementById("tncOverlay").style.display = "block";
+                    document.getElementById("tncPopup").style.opacity = "1";
+                    // updateTnC("https://www.doctoroncall.com.my/coronavirus/termsOfServicefloating?lang=en");
+                    
+                    // document.getElementById("termsdisplay").innerHTML=tnc;
+                }else if(!show){
+                    document.getElementById("tncOverlay").style.display = "none";
+                    document.getElementById("tncPopup").style.display = "none";
+                }
+            }
+
+            function checkedTnC(){
+                console.log("checked");
+                var checkBox = document.getElementById("checkTnC");
+                var btn = document.getElementById("TnCbutton");
+                // btn.disabled=true;
+                if (checkBox.checked == true){
+                    btn.disabled = false;
+                } else {
+                    btn.disabled = true;
+                }
+            }
+
+            function closeTnCPopup(){
+                document.getElementById("tncOverlay").style.display = "none";
+                document.getElementById("tncPopup").style.display = "none";
+            }
+
+            function updateTnC(url){
+                var xmlHttp = new XMLHttpRequest();
+                xmlHttp.open("GET", url, false); 
+                xmlHttp.send(null);
+                document.getElementById("termsdisplay").innerHTML=xmlHttp.responseText;
+            }           
+            
+        </script>
     </body>
 </html>

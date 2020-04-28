@@ -12,338 +12,6 @@
         <meta name="author" content=""> 
         <link rel="stylesheet" type="text/css" href="./stylesheets/video-page-style.css">
         
-        <style>
-            body{
-                background-color: #fff;
-                color: #140404;
-            }
-
-            .health-back-btn-display{
-                display: flex;
-                justify-content: space-between;
-                margin-top: 15px;
-            }
-
-            .health-back-btn{
-                align-items: center;
-                color: #3c3c3c;
-                display: flex;
-                text-decoration: none;
-                padding: 10px 0;
-            }
-
-            .health-contact-spprt-btn{
-                align-items: center;
-                color: #3c3c3c;
-                display: flex;
-                text-decoration: none;
-                border: 1px solid #41C0F1;
-                border-radius: 4px;
-                padding: 10px;
-            }
-
-            .question-mark-border{
-                padding: 10px;
-                background: #fff;
-                border: 1px solid #41C0F1;
-                border-radius: 50%;
-                width: 20px;
-                display: flex;
-                height: 20px;
-                justify-content: center;
-                align-items: center;
-                margin-right: 10px;
-            }
-
-            .calltype-consult-btn{
-                width: 100%;
-                color: #fff;
-                cursor: pointer;
-                background-color: #41C0F1;
-                border: none;
-                border-radius: 4px;
-                font-size: 14px;
-                margin-top: 35px;
-                padding: 15px;
-            }
-
-            .floating-calltype-consult-btn{
-                display: none;
-            }
-
-            .box-calltype-bg{
-                border: 1px solid #F0F0F0;
-                border-radius:8px;
-                padding: 15px;
-                margin-top: 10px;
-            }
-            .doctor-dflex-block{
-                display: flex;align-items: center;
-            }
-            .doctor-img-height{
-                width:auto;
-                height:55px;
-            }
-            .img-margin-left{
-                margin-left: 10px;
-            }
-            .dr-desc-review-page{
-                color:#9D9D9D;
-                display: flex;
-                align-items: center;
-                margin-top: 7px;
-            }
-            .grad-icon-desc{
-                width:auto;
-                height:21px;
-                margin-right:10px;
-            }
-            .dr-desc-text-lineheight{
-                margin-top: 10px;
-                line-height: 23px;
-            }
-            .calltype-total-amount-price{
-                font-weight: bold;
-                font-size: 18px;
-            }
-            .question-mark-mobile{
-                display: none;
-            } 
-
-            .calltype-option-block{
-                margin-top: 10px;
-            }
-
-            .calltype-how-to-speak-title{
-                color:#140404;
-                font-size: 24px;
-                font-weight: bold;
-                line-height: 33px;
-                margin-bottom: 30px;
-                /* width: 60%; */
-            }
-            .icon-calltype-bg{
-                padding: 5px;
-                background: #fff;
-                border:1px solid #E7EDFB;
-                border-radius: 50%;
-                width: 50px;
-                display: flex;
-                height: 50px;
-                justify-content: center;
-                align-items: center;
-            }
-            .icon-mic-cam-wifi{
-                width:auto;
-                height:30px;
-            }
-            .calltype-choose-option-text{
-                width: 65%;
-            }
-            .calltype-subtext-option{
-                font-weight: bold;
-                margin-bottom: 5px;
-            }
-            .calltype-recommended-text{
-                background-color: #DE6377;
-                color: #fff;
-                position: absolute;
-                right: 0;
-                top: 16%;
-                padding: 3px 10px;
-                border-radius: 4px;
-                margin-right: 25px;
-            }
-            .custom-margin-top-20{
-                margin-top: 20px;
-            }
-
-            @media(max-width: 576px){
-                .health-contact-spprt-btn{
-                    display: none;
-                }
-                .health-back-btn-display{
-                    padding-left: 10px;
-                }
-
-                .floating-calltype-consult-btn{
-                    background-color: #fff;
-                    bottom: 0;
-                    border-top: 1px solid #D6C6C6;
-                    display: flex;
-                    align-items: center;
-                    justify-content: space-between;
-                    position: fixed;
-                    width: 100%;
-                    z-index: 99;
-                    padding: 10px;
-                }
-                .calltype-consult-btn{
-                    margin-top: unset;
-                }               
-                .total-amount-text{
-                    font-size: 11px;
-                    margin-bottom: 10px;
-                }
-                .symptom-margin-mobile{
-                    margin-top: 20px;
-                }
-                .question-mark-mobile{
-                    display: flex;
-                    margin: 10px 0;
-                }
-                .calltype-recommended-text{
-                    top: 22%;
-                }
-                .custom-margin-bottom-70{
-                    margin-bottom: 70px;
-                }
-                .custom-margin-top-20{
-                    margin-top: unset;
-                }
-                .calltype-how-to-speak-title{
-                    margin-top: 20px;
-                }
-                .icon-calltype-bg{
-                    margin-right: 23px;
-                }
-                .calltype-choose-option-text{
-                    font-size: 14px;
-                    width: 55%;
-                }
-                .calltype-total-amount-price{
-                    font-size: 14px;
-                }
-            }
-
-            @media(max-width: 320px){
-                .calltype-choose-option-text{
-                    font-size: 12px;
-                    width: 49%;
-                }
-                .calltype-total-amount-price{
-                    font-size: 12px;
-                }
-                .calltype-recommended-text{
-                    font-size: 12px;
-                }
-            }
-
-            /* Customize Checkbox CSS */
-            /* The container */
-            .checkbox-label {
-                display: block;
-                position: relative;
-                padding-left: 35px;
-                margin-bottom: 12px;
-                cursor: pointer;
-                -webkit-user-select: none;
-                -moz-user-select: none;
-                -ms-user-select: none;
-                user-select: none;
-            }
-
-            /* Hide the browser's default checkbox */
-            .checkbox-label input {
-                position: absolute;
-                opacity: 0;
-                cursor: pointer;
-                height: 0;
-                width: 0;
-            }
-
-            /* Create a custom checkbox */
-            .checkmark {
-                border-radius: 2px;
-                position: absolute;
-                top: 0;
-                left: 0;
-                height: 18px;
-                width: 18px;
-                background-color: #eee;
-            }
-
-            /* On mouse-over, add a grey background color */
-            .checkbox-label:hover input ~ .checkmark {
-                background-color: #ccc;
-            }
-
-            /* When the checkbox is checked, add a blue background */
-            .checkbox-label input:checked ~ .checkmark {
-                background-color: #41C0F1;
-            }
-
-            /* Create the checkmark/indicator (hidden when not checked) */
-            .checkmark:after {
-                content: "";
-                position: absolute;
-                display: none;
-            }
-
-            /* Show the checkmark when checked */
-            .checkbox-label input:checked ~ .checkmark:after {
-                display: block;
-            }
-
-            /* Style the checkmark/indicator */
-            .checkbox-label .checkmark:after {
-                left: 6px;
-                top: 1px;
-                width: 6px;
-                height: 13px;
-                border: solid #fff;
-                border-width: 0px 2px 2px 0px;
-                -webkit-transform: rotate(45deg);
-                -ms-transform: rotate(45deg);
-                transform: rotate(45deg);
-            }
-
-            @media(max-width: 576px){
-                .checkbox-label{
-                    margin: 35px 0;
-                }
-            }
-
-            /* Custom Radio Button */
-            .calltype-choose-bar input[type="radio"] {
-                opacity: 0;
-                position: fixed;
-                width: 0;
-            }
-
-            .calltype-choose-bar label {
-                align-items: center;
-                cursor: pointer;
-                display: flex;
-                background-color: #fff;
-                padding: 15px;
-                font-family: sans-serif, Arial;
-                font-size: 16px;
-                border: 1px solid #41C0F1;
-                border-radius: 4px;
-                justify-content: space-between;
-                width: 100%;
-                margin-bottom: 15px;
-                height: 115px;
-            }
-
-            .calltype-choose-bar label svg{
-                fill:#c2c1c0;
-            }
-
-            .calltype-choose-bar input[type="radio"]:checked + label {
-                background-color: #41C0F1;
-                border-color: #41C0F1;
-                color: #fff;
-            }
-
-            .calltype-choose-bar input[type="radio"]:checked + label svg{
-                color: #41C0F1;
-                fill: #41C0F1;
-            }
-
-        </style>
-        
     </head>
 
     <body>
@@ -359,6 +27,12 @@
             </picture>
             </a>
             <!-- end of a tag for logo -->
+
+            <a class="health-contact-spprt-btn" href="#">
+                <div class="question-mark-border">?</div>
+                Contact Support
+            </a>
+            <a class="question-mark-border question-mark-mobile" href="#">?</a>
         </header>
         <!-- end of header container -->
         <!-- end of header -->
@@ -368,13 +42,16 @@
             <div class="health-back-btn-display">
                 <a class="health-back-btn" href="#">
                     <img style="margin-right:10px;width: 20px;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAABmJLR0QA/wD/AP+gvaeTAAAAwklEQVRoge3ZQQrCMBRF0YsK7smtuB87ch+6CNfjIizEgQY6qElLU/NS3oFO238JFPoLZmaWtqs9QAkdcAcOtQdZogPC92o2ZhjRbMxYRHMxqYhmYq7kIwLwAk6VZsyachIB6IFzpRmzHKHCESococIRKhyhQjpizmdnWG2KCi4In8pcjlHlGFWOUeUYVY5RtYkFXTTlZG6Ir0yjVEwzEdFYjPzy+pdhTPGIfcmbZTyAI/Dk86bq//jsVWziZ6iZ2TJvqKlFSv81jt8AAAAASUVORK5CYII=">
-                    Back
+                    <div class="back-btn-text-mobiledisplay">Back</div>
                 </a>
-                <a class="health-contact-spprt-btn" href="#">
-                    <div class="question-mark-border">?</div>
-                    Contact Support
-                </a>
-                <div class="question-mark-border question-mark-mobile">?</div>
+                <div class="progress-container">
+                    <div class="progressTrack">
+                    <div class="progressBar" style="width: 66.66%;"></div>
+                    </div>
+                </div>
+                <div style="font-size: 16px;padding: 10px 0;">
+                    Step 2 of 3
+                </div>
             </div>
 
             <div class="row custom-margin-top-20">
@@ -416,7 +93,7 @@
                                 <div class="calltype-total-amount-price">RM 19.90</div>
                             </label>
                         
-                            <input type="radio" id="audioCall" name="calltypeOption" value="audioCall">
+                            <!-- <input type="radio" id="audioCall" name="calltypeOption" value="audioCall">
                             <label for="audioCall">
                                 <div class="icon-calltype-bg">
                                     <svg class="icon-mic-cam-wifi" viewBox="0 0 28 28"><g id="phone-icon"><path d="M27.18,14l-3.73,3.73a.59.59,0,0,1-.7.09l-4-2.26a.67.67,0,0,1-.35-.57l-.06-3.07a.6.6,0,0,0-.46-.55,16.59,16.59,0,0,0-8.16.18.83.83,0,0,0-.58.74L8.94,15a.79.79,0,0,1-.38.61L5,17.75a.64.64,0,0,1-.78-.1L.73,14.19a.56.56,0,0,1,0-.82C3.24,11.27,15.51,2,27.17,13.2A.56.56,0,0,1,27.18,14Z"/></g></svg>
@@ -429,7 +106,7 @@
 
                                 <div class="calltype-total-amount-price">RM 19.90</div>
                                 
-                            </label>
+                            </label> -->
 
                             <input type="radio" id="textChat" name="calltypeOption" value="textChat">
                             <label for="textChat">
@@ -448,7 +125,7 @@
                             <div class="custom-margin-bottom-70"></div>
                         </div>
 
-                        <input type="submit" class="calltype-consult-btn desktop-only" value="Consult Now">
+                        <input type="submit" class="calltype-consult-btn desktop-only" value="Proceeed to Payment">
                     </div>
                 </div>
             </div>
@@ -456,7 +133,7 @@
         </div>
 
         <div class="floating-calltype-consult-btn">
-            <input type="submit" class="calltype-consult-btn" value="Consult Now">
+            <input type="submit" class="calltype-consult-btn" value="Proceeed to Payment">
         </div>
 
     </body>

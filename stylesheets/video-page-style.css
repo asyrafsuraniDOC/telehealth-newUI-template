@@ -56,9 +56,10 @@ html{font-size:14px;box-sizing:border-box;overflow: auto;-ms-overflow-style:scro
 }
 
 body {
-    background-color: #EBF1FF;
+    background-color: #fff;
     font-family: 'Open Sans', sans-serif; 
     margin: 0;
+    color: #140404;
 }
 
 .mobile-only{
@@ -69,13 +70,23 @@ body {
     display: block;
 }
 
+.back-btn-text-mobiledisplay{
+  display: block;
+}
+
+@media (max-width:768px){
+  .back-btn-text-mobiledisplay{
+    display: none;
+  }
+}
+
 @media (max-width: 575px){
     .mobile-only{
         display: block;
     }  
     .desktop-only{
         display: none;
-    }   
+    } 
 }
 
 /*
@@ -149,6 +160,9 @@ _    _ ______          _____  ______ _____
   /* padding-bottom: 10px; */
   width: 100%;
   z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .header ul {
@@ -617,6 +631,1257 @@ ______ ____   ____ _______ ______ _____
 }
 
 
+
+/* Health Detail Page CSS */
+
+.health-back-btn-display{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+.health-back-btn{
+  align-items: center;
+  color: #3c3c3c;
+  display: flex;
+  text-decoration: none;
+  padding: 10px 0;
+}
+
+.health-contact-spprt-btn{
+  align-items: center;
+  color: #3c3c3c;
+  display: flex;
+  text-decoration: none;
+  border: 1px solid #41C0F1;
+  border-radius: 4px;
+  padding: 10px;
+}
+
+.question-mark-border{
+  padding: 10px;
+  background: #fff;
+  border: 1px solid #41C0F1;
+  border-radius: 50%;
+  width: 20px;
+  display: flex;
+  height: 20px;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.health-detail-box{
+  border: 1px solid #F0F0F0;
+  border-radius: 4px;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+.health-patient-detail-text{
+  font-size:20px;
+  /* font-weight:bold; */
+  margin-bottom: 25px;
+}
+
+.health-subtext-detail-option{
+  font-size: 16px;
+  margin:13px 0
+}
+
+.health-age-number{
+  border: 1px solid #41C0F1;
+  border-radius: 4px;
+  font-size: 14px;
+  height: 40px;
+  margin-right: 10px;
+  text-align: center;
+}
+
+.health-specialty-placeholder{
+  border-radius: 4px;
+  height: 40px;
+  border: none;
+  background-color: #F0F0F0;
+  font-size: 14px;
+  text-align: center;
+  width: 35%;
+}
+
+.health-tell-condition-box{
+  border: 1px solid #D6C6C6;
+  border-radius: 4px;
+  font-size: 14px;
+  height: 130px;
+  width: 100%;
+  padding: 10px;
+}
+
+.health-attach-box{
+  padding: 10px;
+  margin-top: 10px;
+}
+
+.add-attach-text{
+  font-size:20px;
+  font-weight:bold;
+  margin-bottom: 15px;
+}
+
+.add-report-text{
+  font-size: 14px;
+  color: #909090;
+  /* width: 70%; */
+  line-height: 23px;
+}
+
+.attachment-block-bg{
+  background-color: #F0F0F0;
+  cursor: pointer;
+  width: 100%;
+  height: 165px;
+  border-radius: 4px;
+  border: 1px dashed #BCBCBC;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.health-submit-btn{
+  width: 100%;
+  color: #fff;
+  cursor: pointer;
+  background-color: #41C0F1;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  margin-top: 35px;
+  padding: 15px;
+}
+
+.before-submit-detail{
+  display:flex;
+  align-items:center;
+  margin-top:15px;
+  justify-content: center;
+}
+
+.message-to-doc-text{
+  color:#909090;
+  font-size:14px;
+  margin-left: 10px;
+}
+
+.floating-health-sbmit-btn{
+  display: none;
+}
+
+.patient-health-display-block{
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #F0F0F0;
+  padding-bottom: 15px;
+}
+
+.patient-health-profile{
+  padding: 5px;
+  background: #FFCB79;
+  color: #fff;
+  border-radius: 50%;
+  width: 50px;
+  display: flex;
+  height: 50px;
+  justify-content: center;
+  align-items: center;
+  margin-right: 25px;
+  font-size: 24px;
+}
+
+.box-review-bg{
+  border: 1px solid #F0F0F0;
+  border-radius:8px;
+  padding: 15px;
+  margin-top: 10px;
+}
+.doctor-dflex-block{
+  display: flex;align-items: center;
+}
+.doctor-img-height{
+  width:auto;
+  height:55px;
+}
+.img-margin-left{
+  margin-left: 10px;
+}
+.dr-desc-review-page{
+  color:#9D9D9D;
+  display: flex;
+  align-items: center;
+  margin-top: 7px;
+}
+.grad-icon-desc{
+  width:auto;
+  height:21px;
+  margin-right:10px;
+}
+.dr-desc-text-lineheight{
+  margin-top: 10px;
+  line-height: 23px;
+}
+
+/* Custom Radio Button */
+.radio-toolbar input[type="radio"] {
+  opacity: 0;
+  position: fixed;
+  width: 0;
+}
+
+.radio-toolbar label {
+  color: #41C0F1;
+  cursor: pointer;
+  display: inline-block;
+  background-color: #fff;
+  padding: 10px;
+  font-family: sans-serif, Arial;
+  font-size: 16px;
+  border: 1px solid #41C0F1;
+  border-radius: 4px;
+  width: 35%;
+  text-align: center;
+  margin-right: 15px;
+}
+
+.radio-toolbar label svg{
+  fill:#cccccc;
+  margin-right:7px
+}
+
+.radio-toolbar input[type="radio"]:checked + label {
+  background-color: #41C0F1;
+  border-color: #41C0F1;
+  color: #fff;
+}
+
+.radio-toolbar input[type="radio"]:checked + label svg{
+  color: #fff;
+  fill: #fff;
+}
+
+/* .radio-toolbar input[type="radio"]:focus + label {
+  border: 1px solid #444;
+} */
+
+/* .radio-toolbar label:hover {
+  background-color: #dfd;
+} */
+
+@media(max-width: 576px){
+  .health-contact-spprt-btn{
+      display: none;
+  }
+  .container-padding-custom{
+      padding: 0;
+  }
+  .padding-0-mobile{
+      padding: 0;
+  }
+  .row-custom-margin{
+      margin: 0;
+  }
+  .health-back-btn-display{
+      padding:0 10px;
+  }
+  .health-detail-box{
+      border: unset;
+  }
+
+  .floating-health-sbmit-btn{
+      background-color: #fff;
+      bottom: 0;
+      display: block;
+      position: fixed;
+      width: 100%;
+      z-index: 99;
+      padding: 15px;
+  }
+  .attachment-block-bg{
+      margin-bottom: 120px;
+  }
+  .health-submit-btn{
+      margin-top: unset;
+  }
+}
+
+/* Progress Bar CSS */
+.progressBar{
+  background: #8CACED;
+  border-radius: 25px;
+  height: 10px;
+  position: relative;
+  transition: all 0.7s ease-in;
+  width: 0;
+  z-index: 3;
+}
+.progress-container{
+  margin: auto;
+  width: 80%;
+}
+.progressTrack{
+  background: #E8EAF4;
+  border-radius: 25px;
+}
+@media (max-width: 576px){
+  .progress-container{
+      width: 60%;
+  }
+}
+
+.question-mark-mobile{
+  display: none;
+}
+@media (max-width: 576px){
+  .question-mark-mobile{
+      display: flex;
+      margin: 10px 0;
+      text-decoration: none;
+      color: unset;
+  }
+}
+
+
+
+/* Calltype Page CSS */
+
+.calltype-consult-btn{
+  width: 100%;
+  color: #fff;
+  cursor: pointer;
+  background-color: #41C0F1;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  margin-top: 35px;
+  padding: 15px;
+}
+
+.floating-calltype-consult-btn{
+  display: none;
+}
+
+.box-calltype-bg{
+  border: 1px solid #F0F0F0;
+  border-radius:8px;
+  padding: 15px;
+  margin-top: 10px;
+}
+.doctor-dflex-block{
+  display: flex;align-items: center;
+}
+.doctor-img-height{
+  width:auto;
+  height:55px;
+}
+.img-margin-left{
+  margin-left: 10px;
+}
+.dr-desc-review-page{
+  color:#9D9D9D;
+  display: flex;
+  align-items: center;
+  margin-top: 7px;
+}
+.grad-icon-desc{
+  width:auto;
+  height:21px;
+  margin-right:10px;
+}
+.dr-desc-text-lineheight{
+  margin-top: 10px;
+  line-height: 23px;
+}
+.calltype-total-amount-price{
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.calltype-option-block{
+  margin-top: 10px;
+}
+
+.calltype-how-to-speak-title{
+  color:#140404;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 33px;
+  margin-bottom: 30px;
+  /* width: 60%; */
+}
+.icon-calltype-bg{
+  padding: 5px;
+  background: #fff;
+  border:1px solid #E7EDFB;
+  border-radius: 50%;
+  width: 50px;
+  display: flex;
+  height: 50px;
+  justify-content: center;
+  align-items: center;
+}
+.icon-mic-cam-wifi{
+  width:auto;
+  height:30px;
+}
+.calltype-choose-option-text{
+  width: 65%;
+}
+.calltype-subtext-option{
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+.calltype-recommended-text{
+  background-color: #DE6377;
+  color: #fff;
+  position: absolute;
+  right: 0;
+  top: 21%;
+  padding: 3px 10px;
+  border-radius: 4px;
+  margin-right: 25px;
+}
+.custom-margin-top-20{
+  margin-top: 20px;
+}
+
+@media(max-width: 576px){
+
+  .floating-calltype-consult-btn{
+      background-color: #fff;
+      bottom: 0;
+      border-top: 1px solid #D6C6C6;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: fixed;
+      width: 100%;
+      z-index: 99;
+      padding: 10px;
+  }
+  .calltype-consult-btn{
+      margin-top: unset;
+  }               
+  .total-amount-text{
+      font-size: 11px;
+      margin-bottom: 10px;
+  }
+  .symptom-margin-mobile{
+      margin-top: 20px;
+  }
+  .calltype-recommended-text{
+      top: 29%;
+  }
+  .custom-margin-bottom-70{
+      margin-bottom: 70px;
+  }
+  .custom-margin-top-20{
+      margin-top: unset;
+  }
+  .calltype-how-to-speak-title{
+      margin-top: 20px;
+  }
+  .icon-calltype-bg{
+      margin-right: 23px;
+  }
+  .calltype-choose-option-text{
+      font-size: 14px;
+      width: 55%;
+  }
+  .calltype-total-amount-price{
+      font-size: 14px;
+  }
+}
+
+@media(max-width: 320px){
+  .calltype-choose-option-text{
+      font-size: 12px;
+      width: 49%;
+  }
+  .calltype-total-amount-price{
+      font-size: 12px;
+  }
+  .calltype-recommended-text{
+      font-size: 12px;
+  }
+}
+
+/* Customize Checkbox CSS */
+/* The container */
+.checkbox-label {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.checkbox-label input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  border-radius: 2px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 18px;
+  width: 18px;
+  background-color: #eee;
+}
+
+/* On mouse-over, add a grey background color */
+.checkbox-label:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.checkbox-label input:checked ~ .checkmark {
+  background-color: #41C0F1;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.checkbox-label input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.checkbox-label .checkmark:after {
+  left: 6px;
+  top: 1px;
+  width: 6px;
+  height: 13px;
+  border: solid #fff;
+  border-width: 0px 2px 2px 0px;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+@media(max-width: 576px){
+  .checkbox-label{
+      margin: 35px 0;
+  }
+}
+
+/* Custom Radio Button */
+.calltype-choose-bar input[type="radio"] {
+  opacity: 0;
+  position: fixed;
+  width: 0;
+}
+
+.calltype-choose-bar label {
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  background-color: #fff;
+  padding: 15px;
+  font-family: sans-serif, Arial;
+  font-size: 16px;
+  border: 1px solid #41C0F1;
+  border-radius: 4px;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 15px;
+  height: 115px;
+}
+
+.calltype-choose-bar label svg{
+  fill:#c2c1c0;
+}
+
+.calltype-choose-bar input[type="radio"]:checked + label {
+  background-color: #41C0F1;
+  border-color: #41C0F1;
+  color: #fff;
+}
+
+.calltype-choose-bar input[type="radio"]:checked + label svg{
+  color: #41C0F1;
+  fill: #41C0F1;
+}
+
+
+/* Review Page CSS */
+.pay-consult-btn{
+  width: 100%;
+  color: #fff;
+  cursor: pointer;
+  background-color: #41C0F1;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  margin-top: 35px;
+  padding: 15px;
+}
+
+.floating-pay-consult-btn{
+  display: none;
+}
+
+.box-review-bg{
+  border: 1px solid #F0F0F0;
+  border-radius:8px;
+  padding: 15px;
+  margin-top: 10px;
+}
+.doctor-dflex-block{
+  display: flex;align-items: center;
+}
+.doctor-img-height{
+  width:auto;
+  height:55px;
+}
+.img-margin-left{
+  margin-left: 10px;
+}
+.dr-desc-review-page{
+  color:#9D9D9D;
+  display: flex;
+  align-items: center;
+  margin-top: 7px;
+}
+.grad-icon-desc{
+  width:auto;
+  height:21px;
+  margin-right:10px;
+}
+.dr-desc-text-lineheight{
+  margin-top: 10px;
+  line-height: 23px;
+}
+.review-detail-text{
+  color: #408BF9;
+  margin-bottom: 5px;
+}
+.payment-block-bg{
+  padding: 15px;
+  margin-top: 10px;
+}
+.payment-icon-dflex{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 55px;
+}
+.payment-icon-block-details{
+  display: flex;
+  align-items: center;
+}
+.payment-icon-img{
+  width: auto;
+  height: 33px;
+  margin-right: 10px;
+}
+.payment-icon-text{
+  color:#140404;
+  font-size: 13px;
+  width: 50%;
+}
+.coupon-code-textfield{
+  background-color:#F0F0F0;
+  height: 45px;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  width: 60%;
+  margin-right: 4%;
+  text-indent: 20px;
+}
+.apply-code-btn{
+  background-color: #41C0F1;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 14px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-flex;
+  width: 35%;
+  height: 45px;
+  align-items: center;
+  justify-content: center;
+}   
+.division-border-top{
+  display: block;
+  border-top: 2px solid #F0F0F0;
+  margin: 20px 0;
+}  
+.total-amount-block{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+.total-amount-price{
+  font-weight: bold;
+  font-size: 18px;
+}
+.term-condition-style{
+  text-decoration: none;
+  color: #41C0F1;
+}
+@media(max-width:992px){
+  .symptom-margin-mobile{
+      margin-top: 20px;
+  }
+}
+
+@media(max-width: 576px){
+
+  .floating-pay-consult-btn{
+      background-color: #fff;
+      bottom: 0;
+      border-top: 1px solid #D6C6C6;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: fixed;
+      width: 100%;
+      z-index: 99;
+      padding: 15px;
+  }
+  .pay-consult-btn{
+      margin-top: unset;
+      width: 50%;
+  }
+  .payment-block-bg{
+      padding: unset;
+      margin-top: 10px;
+  }
+  .coupon-code-textfield{
+      margin-right: 3%;
+  }
+  .payment-icon-text{
+      font-size: 9px;
+  }
+  .division-border-top{
+      display: none;
+  }
+  .total-amount-block{
+      display: none;
+  }                
+  .total-amount-text{
+      font-size: 11px;
+      margin-bottom: 10px;
+  }
+  .payment-icon-img{
+      height: 26px;
+  }
+}
+
+/* Customize Checkbox CSS */
+/* The container */
+.checkbox-label {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.checkbox-label input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  border-radius: 2px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 18px;
+  width: 18px;
+  background-color: #eee;
+}
+
+/* On mouse-over, add a grey background color */
+.checkbox-label:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.checkbox-label input:checked ~ .checkmark {
+  background-color: #41C0F1;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.checkbox-label input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.checkbox-label .checkmark:after {
+  left: 6px;
+  top: 1px;
+  width: 6px;
+  height: 13px;
+  border: solid #fff;
+  border-width: 0px 2px 2px 0px;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+@media(max-width: 576px){
+  .checkbox-label{
+      margin: 35px 0;
+  }
+}
+
+
+
+/* Video Page CSS */
+
+.videoElement {
+  border-radius: 8px;
+  width: 100%;
+  /* height: 240px; */
+  background-color: #666;
+}
+
+.join-consult-btn{
+  width: 100%;
+  border-radius: 4px;
+  display: block;
+  background: #41C0F1;
+  color: #fff;
+  cursor: pointer;
+  margin-top: 10px;
+  text-align: center;
+  text-decoration: none;
+  padding: 15px 40px;
+}
+
+.manage-appt-btn{
+  width:max-content;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  background: #EDEDED;
+  color: #140404;
+  cursor: pointer;
+  margin: 20px 0;
+  text-align: center;
+  text-decoration: none;
+  padding: 15px;
+  height: 46px;
+}
+
+.assess-risk-btn{
+  width:auto;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  background: #EB7676;
+  color: #fff;
+  cursor: pointer;
+  margin-top: 10px;
+  text-align: center;
+  text-decoration: none;
+  padding: 15px;
+  height: 46px;
+  justify-content: center;
+}
+
+.icon-bg{
+  padding: 5px;
+  background: #fff;
+  border:1px solid #E7EDFB;
+  border-radius: 50%;
+  width: 50px;
+  display: flex;
+  height: 50px;
+  justify-content: center;
+  align-items: center;
+}
+
+.round-bg-white-join{
+  padding: 15px;
+  background: #fff;
+  border:1px solid #E7EDFB;
+  border-radius: 50%;
+  width: 20px;
+  display: flex;
+  height: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.round-bg-red-join{
+  padding: 10px;
+  background: red;
+  border-radius: 50%;
+  width: 5px;
+  display: flex;
+  height: 5px;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-custom{
+  margin-top: 30px;
+}
+
+.d-flex{
+  display: flex;
+}
+
+.vid-success-font{
+  font-weight: bold;
+  font-size: 30px;
+  color: #140404;
+  width: 70%;
+}
+
+.tick-icon-column{
+  width: 30%;
+}
+
+.tick-icon{
+  width: auto;
+  height:35px
+}
+
+.click-join-text{
+  font-size: 14px;
+  color: #140404;
+  margin-top: 10px;
+}
+
+.box-white-bg{
+  border: 1px solid #F0F0F0;
+  border-radius:8px;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+.doctor-dflex-block{
+  display: flex;align-items: center;
+}
+
+.doctor-img-height{
+  width:auto;
+  height:55px;
+}
+
+.img-margin-left{
+  margin-left: 10px;
+}
+
+.dr-desc-with-icon{
+  color:#9D9D9D;
+  display: flex;
+  align-items: center;
+}
+
+.grad-icon-desc{
+  width:auto;
+  height:21px;
+  margin-right:10px;
+}
+
+.dr-desc-text-lineheight{
+  margin-top: 10px;
+  line-height: 23px;
+}
+
+.get-med-text{
+  margin-top: 10px;
+  line-height: 23px;
+  font-weight: bold;
+  font-size: 18px;
+  color: #404040;
+}
+
+.get-med-dflex-block{
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.get-med-img-height{
+  width:auto;
+  height:105px;
+}
+
+.get-med-desc{
+  line-height: 23px;
+}
+
+.refill-now-text{
+  color:#41C0F1;
+  margin-top: 10px;
+}
+
+.switch-row{
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  justify-content:space-between;
+  font-size: 16px;
+}
+
+.icon-mic-cam-wifi{
+  width:auto;
+  height:30px;
+}
+
+.switch-text{
+  border: 1px solid #41C0F1;
+  border-radius:4px;
+  padding: 5px 15px;
+  color: #41C0F1;
+}
+
+.dflex-wifi-desc{
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+.margin-right-60{
+  margin-right: 60px;
+}
+
+.dflex-con-test-text{
+  display: flex;
+  align-items: center;
+  margin-bottom:15px;
+}
+
+.testing-vid-audio-text{
+  margin-left:10px;
+  font-size: 11px;
+  color: #140404;
+}
+
+.connectivity-bar{
+  border:1px solid #DEDEDE;
+  height: 5px;
+  width: 100%;
+}
+
+.connectivity-bar-blue{
+  height: 4px;
+  width: 50%;
+  background-color: #41C0F1;
+}
+
+.join-consult-floating-btn{
+  display: none;
+}
+
+.video-consult-details-text{
+  background-color: #408BF9;
+  font-size: 23px;
+  color: #fff;
+  padding: 20px;
+}
+
+.video-details-subtext{
+  color: #909090;
+  margin-bottom: 7px;
+}
+
+.link-appt-dflex{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.link-appt-color{
+  color: #408BF9;
+  width: 50%;
+}
+
+.send-email-text-border{
+  border-top: 1px solid #F0F0F0;
+  padding-top: 15px;
+}
+
+.find-other-doc-margintop{
+  margin-top: 10px;
+}
+
+.view-profile-text{
+  position: absolute;
+  right: 35px;
+}
+
+.view-profile-text a{
+  color: unset;
+  text-decoration: none;
+}
+
+@media (max-width:768px) {
+  .custom-mg-top{
+      margin-top: 20px;
+  }                
+}
+
+@media(max-width: 576px){
+  .container-custom{
+      padding: 0;
+  }
+
+  .tick-icon-column{
+      text-align: end;
+  }
+
+  .padding-0-mobile{
+      padding: 0;
+  }
+
+  .row-custom-margin{
+      margin: 0;
+  }
+
+  .click-join-text{
+      padding: 0 15px;
+  }
+
+  .d-flex{
+      padding: 0 15px;
+  }
+
+  .box-white-bg{
+      border-radius:unset;
+  }
+
+  .mobile-mg-bottom{
+      margin-bottom: 85px;
+  }
+
+  .join-consult-floating-btn{
+      display: flex;
+      align-items: center;
+      bottom: 0;
+      position: fixed;
+      width: 100%;
+      z-index: 99;
+  }
+
+  .view-profile-text{
+      right: 10px;
+  }
+}
+
+@media(max-width: 360px){
+  .view-profile-text{
+      right: 5px;
+  }
+}
+
+/* Switch slider CSS */
+.switch {
+position: relative;
+display: inline-block;
+width: 60px;
+height: 34px;
+}
+
+.switch input { 
+opacity: 0;
+width: 0;
+height: 0;
+}
+
+.slider {
+position: absolute;
+cursor: pointer;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background-color: #fff;
+-webkit-transition: .4s;
+transition: .4s;
+}
+
+.slider:before {
+position: absolute;
+content: "";
+height: 26px;
+width: 26px;
+left: 4px;
+bottom: 4px;
+background-color: #41C0F1;
+-webkit-transition: .4s;
+transition: .4s;
+}
+
+input:checked + .slider {
+background-color: #41C0F1;
+}
+
+input:checked + .slider:before {
+background-color: #fff;
+}
+
+input:focus + .slider {
+box-shadow: 0 0 1px #41C0F1;
+}
+
+input:checked + .slider:before {
+-webkit-transform: translateX(26px);
+-ms-transform: translateX(26px);
+transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+border-radius: 34px;
+border: 1px solid #D9D9D9;
+}
+
+.slider.round:before {
+border-radius: 50%;
+}
 
 
 

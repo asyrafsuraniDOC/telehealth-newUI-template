@@ -12,334 +12,13 @@
         <meta name="author" content=""> 
         <link rel="stylesheet" type="text/css" href="./stylesheets/video-page-style.css">
         
-        <style>
-            
-            .videoElement {
-                border-radius: 8px;
-                width: 100%;
-                /* height: 240px; */
-                background-color: #666;
-            }
-
-            .join-consult-btn{
-                width: 100%;
-                border-radius: 4px;
-                display: block;
-                background: #41C0F1;
-                color: #fff;
-                cursor: pointer;
-                margin-top: 10px;
-                text-align: center;
-                text-decoration: none;
-                padding: 15px 40px;
-            }
-
-            .icon-bg{
-                padding: 5px;
-                background: #fff;
-                border:1px solid #E7EDFB;
-                border-radius: 50%;
-                width: 50px;
-                display: flex;
-                height: 50px;
-                justify-content: center;
-                align-items: center;
-            }
-
-            .round-bg-white-join{
-                padding: 15px;
-                background: #fff;
-                border:1px solid #E7EDFB;
-                border-radius: 50%;
-                width: 20px;
-                display: flex;
-                height: 20px;
-                justify-content: center;
-                align-items: center;
-            }
-
-            .round-bg-red-join{
-                padding: 10px;
-                background: red;
-                border-radius: 50%;
-                width: 5px;
-                display: flex;
-                height: 5px;
-                justify-content: center;
-                align-items: center;
-            }
-
-            .container-custom{
-                margin-top: 30px;
-            }
-
-            .d-flex{
-                display: flex;
-            }
-
-            .vid-success-font{
-                font-weight: bold;
-                font-size: 30px;
-                color: #140404;
-                width: 70%;
-            }
-
-            .tick-icon-column{
-                width: 30%;
-            }
-
-            .tick-icon{
-                width: auto;
-                height:35px
-            }
-
-            .click-join-text{
-                font-size: 14px;
-                color: #140404;
-                margin-top: 10px;
-            }
-
-            .box-white-bg{
-                background-color: #fff;
-                border-radius:8px;
-                padding: 10px;
-                margin-top: 10px;
-            }
-
-            .doctor-dflex-block{
-                display: flex;align-items: center;
-            }
-
-            .doctor-img-height{
-                width:auto;
-                height:55px;
-            }
-
-            .img-margin-left{
-                margin-left: 10px;
-            }
-
-            .dr-desc-with-icon{
-                color:#9D9D9D;
-                display: flex;
-                align-items: center;
-            }
-
-            .grad-icon-desc{
-                width:auto;
-                height:21px;
-                margin-right:10px;
-            }
-
-            .dr-desc-text-lineheight{
-                margin-top: 10px;
-                line-height: 23px;
-            }
-
-            .get-med-text{
-                margin-top: 10px;
-                line-height: 23px;
-                font-weight: bold;
-                font-size: 18px;
-                color: #404040;
-            }
-
-            .get-med-dflex-block{
-                display: flex;
-                align-items: center;
-                margin-top: 10px;
-            }
-
-            .get-med-img-height{
-                width:auto;
-                height:105px;
-            }
-
-            .get-med-desc{
-                line-height: 23px;
-            }
-
-            .refill-now-text{
-                color:#41C0F1;
-                margin-top: 10px;
-            }
-
-            .switch-row{
-                display: flex;
-                align-items: center;
-                margin-top: 10px;
-                justify-content:space-between;
-                font-size: 16px;
-            }
-
-            .icon-mic-cam-wifi{
-                width:auto;
-                height:30px;
-            }
-
-            .switch-text{
-                border: 1px solid #41C0F1;
-                border-radius:4px;
-                padding: 5px 15px;
-                color: #41C0F1;
-            }
-
-            .dflex-wifi-desc{
-                display: flex;
-                align-items: center;
-                margin-top: 10px;
-                font-size: 16px;
-            }
-
-            .margin-right-60{
-                margin-right: 60px;
-            }
-
-            .dflex-con-test-text{
-                display: flex;
-                align-items: center;
-                margin-bottom:15px;
-            }
-
-            .testing-vid-audio-text{
-                margin-left:10px;
-                font-size: 11px;
-                color: #140404;
-            }
-
-            .connectivity-bar{
-                border:1px solid #DEDEDE;
-                height: 5px;
-                width: 100%;
-            }
-
-            .connectivity-bar-blue{
-                height: 4px;
-                width: 50%;
-                background-color: #41C0F1;
-            }
-
-            .join-consult-floating-btn{
-                display: none;
-            }
-
-            @media(max-width: 576px){
-                .container-custom{
-                    padding: 0;
-                }
-
-                .tick-icon-column{
-                    text-align: end;
-                }
-
-                .padding-0-mobile{
-                    padding: 0;
-                }
-
-                .row-custom-margin{
-                    margin: 0;
-                }
-
-                .click-join-text{
-                    padding: 0 15px;
-                }
-
-                .d-flex{
-                    padding: 0 15px;
-                }
-
-                .box-white-bg{
-                    border-radius:unset;
-                }
-
-                .mobile-mg-bottom{
-                    margin-bottom: 85px;
-                }
-
-                .join-consult-floating-btn{
-                    display: flex;
-                    align-items: center;
-                    bottom: 0;
-                    position: fixed;
-                    width: 100%;
-                    z-index: 99;
-                }
-            }
-
-            /* Switch slider CSS */
-            .switch {
-            position: relative;
-            display: inline-block;
-            width: 60px;
-            height: 34px;
-            }
-
-            .switch input { 
-            opacity: 0;
-            width: 0;
-            height: 0;
-            }
-
-            .slider {
-            position: absolute;
-            cursor: pointer;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-color: #fff;
-            -webkit-transition: .4s;
-            transition: .4s;
-            }
-
-            .slider:before {
-            position: absolute;
-            content: "";
-            height: 26px;
-            width: 26px;
-            left: 4px;
-            bottom: 4px;
-            background-color: #41C0F1;
-            -webkit-transition: .4s;
-            transition: .4s;
-            }
-
-            input:checked + .slider {
-            background-color: #41C0F1;
-            }
-
-            input:checked + .slider:before {
-            background-color: #fff;
-            }
-
-            input:focus + .slider {
-            box-shadow: 0 0 1px #41C0F1;
-            }
-
-            input:checked + .slider:before {
-            -webkit-transform: translateX(26px);
-            -ms-transform: translateX(26px);
-            transform: translateX(26px);
-            }
-
-            /* Rounded sliders */
-            .slider.round {
-            border-radius: 34px;
-            border: 1px solid #D9D9D9;
-            }
-
-            .slider.round:before {
-            border-radius: 50%;
-            }
-        </style>
-        
     </head>
 
     <body>
 
         <!-- start of header -->
         <!-- start container for header -->
-        <header class="container-fluid header">
+        <header class="container-fluid header desktop-only">
             <!-- start a tag for logo -->
             <a href="#">
             <picture>
@@ -348,40 +27,12 @@
             </picture>
             </a>
             <!-- end of a tag for logo -->
-            <input class="header-menu-btn" type="checkbox" id="menu-btn" />
-            <label class="header-menu-icon" for="menu-btn">
-                <span class="navicon"></span>
-            </label>
 
-            <!-- start ul for content in header -->
-            <div class="header-menu">
-
-                <!--Mobile only login design-->
-                <div class="header-menu-div">               
-
-                <div class="header-menu-div header-more-content">
-                    <!-- start div for header content in desktop -->
-                    <div class="header-dropdown-content">
-
-                        <!-- join video consultation button -->
-                        <a href="#" style="background-color: #41C0F1;margin-left: unset;color: white;display: flex;align-items: center;justify-content: center;"><div class="round-bg-white-join"><div class="round-bg-red-join"></div></div><div style="margin-left: 10px;">Click to join Video Consultation</div></a>
-                        <a href="about-us.html">About Us</a> 
-                        <a href="/soalan">Health Q&A</a>
-                        <a href="<%= url.article %>">Read Health Articles</a>
-                        <a href="faq.html">FAQ</a>
-                        <a href="/media">Media</a>
-                        <a href="career.html">Careers</a>
-                        <a href="panel-doctor.html">Panel Doctors</a>
-                        <a href="corporate-partnership.html">Corporate Partnerships</a>
-                        <a href="contact-us.html">Contact Us</a>
-                    </div>
-                </div>                
-
-            </div>
-
-
-
-            </div>
+            <a class="health-contact-spprt-btn" href="#">
+                <div class="question-mark-border">?</div>
+                Contact Support
+            </a>
+            <a class="question-mark-border question-mark-mobile" href="#">?</a>
         </header>
         <!-- end of header container -->
         <!-- end of header -->
@@ -398,52 +49,30 @@
                     <div class="click-join-text">Click “Join The Video Consultation” to enter the secure video room with doctor</div>
 
                     <!-- video block mobile only -->
-                    <div class="box-white-bg mobile-only">
-                        <!-- webcam video user display -->
-                        <video autoplay="true" id="" class="videoElement"></video>
-
-                        <!-- camera switch -->
-                        <div class="switch-row">
-                            <div class="icon-bg">
-                                <img class="icon-mic-cam-wifi" src="./images/icon-video-call.png">
-                            </div>
-                            <div>Camera</div>
-                            <div class="switch-text">Switch</div>
-                            <label class="switch">
-                                <input type="checkbox" checked>
-                                <span class="slider round"></span>
-                            </label>                        
+                    <div class="video-consult-details-text mobile-only" style="margin-top: 15px;">Video Consultation Details</div>
+                    <div class="box-white-bg mobile-only" style="border-radius: 0 0 8px 8px;margin-top: unset;">                       
+                        <div class="video-details-subtext">Doctor</div>
+                        <div>Dr Sashini Seeni</div>
+                        <br>
+                        <div class="video-details-subtext">Date</div>
+                        <div>29 April 2020, Wednesday</div>
+                        <br>
+                        <div class="video-details-subtext">Time</div>
+                        <div>3:00 PM</div>
+                        <br>
+                        <div class="video-details-subtext">Link to your video Consultation</div>
+                        <div class="link-appt-dflex" style="display: inline-block;">
+                            <div style="width: 50%;margin-bottom: 10px;"><a class="link-appt-color" href="https://www.DoctorOnCall.com.my/videoConsultation?79123081">https://www.DoctorOnCall.com.my/videoConsultation?79123081</a></div>
+                            <svg width="28.75" height="30" viewBox="0 0 28.75 30"><defs><style>.a{fill:#408bf9;}</style></defs><g transform="translate(-4)"><path class="a" d="M10.25,0A1.259,1.259,0,0,0,9,1.25V2.5H5.25A1.208,1.208,0,0,0,4,3.75V8.125H32.75V3.75A1.208,1.208,0,0,0,31.5,2.5H27.75V1.25A1.259,1.259,0,0,0,26.5,0H25.25A1.259,1.259,0,0,0,24,1.25V2.5H12.75V1.25A1.259,1.259,0,0,0,11.5,0Zm0,1.25H11.5V5H10.25Zm15,0H26.5V5H25.25ZM4,9.375V28.75A1.208,1.208,0,0,0,5.25,30H31.5a1.208,1.208,0,0,0,1.25-1.25V9.375Zm6.25,3.75h3.125V16.25H10.25Zm4.375,0H17.75V16.25H14.625Zm4.375,0h3.125V16.25H19Zm4.375,0H26.5V16.25H23.375ZM10.25,17.5h3.125v3.125H10.25Zm4.375,0H17.75v3.125H14.625ZM19,17.5h3.125v3.125H19Zm4.375,0H26.5v3.125H23.375ZM10.25,21.875h3.125V25H10.25Zm4.375,0H17.75V25H14.625Zm4.375,0h3.125V25H19Zm4.375,0H26.5V25H23.375Zm0,0"/></g></svg>
                         </div>
-                        
-                        <!-- microphone switch -->
-                        <div class="switch-row">
-                            <div class="icon-bg">
-                                <img class="icon-mic-cam-wifi" src="./images/icon-microphone.png">
-                            </div>
-                            <div>Microphone</div>
-                            <div class="switch-text">Switch</div>
-                            <label class="switch">
-                                <input type="checkbox">
-                                <span class="slider round"></span>
-                            </label>                        
-                        </div>                        
-                        
-                        <div class="dflex-wifi-desc">
-                            <div class="icon-bg margin-right-60">
-                                <img class="icon-mic-cam-wifi" src="./images/icon-wi-fi.png">
-                            </div>
-                            <div>
-                                <div class="dflex-con-test-text">Connectivity Test <span class="testing-vid-audio-text">Testing Video/Audio quality</span></div>
-                                
-                                <!-- wifi progress bar -->
-                                <div class="connectivity-bar">
-                                    <div class="connectivity-bar-blue"></div>                                    
-                                </div>
-                                                            
-                            </div>
-                        </div>                        
-                        <a class="join-consult-btn">Join the Video Consultation</a>
+
+                        <a class="manage-appt-btn">Manage your Appointment</a>
+
+                        <p class="send-email-text-border">We will send an email and SMS reminder to you on the day of the consultation.</p>
+                        <p>Thank you for using our service.</p>
                     </div>
+
+                    <div class="container mobile-only"><a class="join-consult-btn">Back To Homepage</a></div>
 
                     <div class="box-white-bg">
                         <div class="doctor-dflex-block">
@@ -455,80 +84,112 @@
                             </div>
                         
                         </div>
-                        <div class="dr-desc-text-lineheight">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas</div>
+                        <div class="dr-desc-text-lineheight">Dr Sashini Seeni is a general practitioner (Primary Care Physician) and have consulted for Hypercholesterolemia, Constipation, Cough In Children, Stuffy Nose, Drowsiness</div>
 
                     </div>
 
-                    <div class="box-white-bg mobile-mg-bottom">
+                    <div class="box-white-bg">
                         <div class="get-med-text">Get Medicine Delivered at Home</div>
                         <div class="get-med-dflex-block">
                             <img class="get-med-img-height" src="./images/med.png">
 
                             <div class="img-margin-left">
-                                <div class="get-med-desc">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum</div>
+                                <div class="get-med-desc">Get 10% Discount on your order when you buy more than RM100!</div>
                                 <div class="refill-now-text">REFILL NOW</div>
                             </div>
                         
                         </div>                        
 
                     </div>
+
+                    <div class="box-white-bg">
+                        <div class="get-med-text">Are you at-risk of Novel Coronavirus infection (COVID-19)?</div>
+                        <div class="get-med-dflex-block">
+                            <img class="get-med-img-height" src="./images/quiz-corona-img.png">
+
+                            <div class="img-margin-left">
+                                <div class="get-med-desc">It just takes 1 minute to know your risk</div>
+                                <a class="assess-risk-btn">Access Your Health Risk</a>
+                            </div>
+                        
+                        </div>                        
+
+                    </div>
+
+                    <div class="box-white-bg mobile-mg-bottom">
+                        <div class="get-med-text">Find Other Doctors</div>
+                        <div class="doctor-dflex-block find-other-doc-margintop">
+                            <img class="doctor-img-height" src="./images/DrSri.png">
+
+                           
+                            <div class="img-margin-left">
+                                <div>Dr Sri</div>
+                                <div class="dr-desc-with-icon"><svg class="grad-icon-desc" viewBox="0 0 28 28"><g id="graduation-icon"><path d="M20.37,10.89H7.7a1.93,1.93,0,0,0-1.83,2v1.89l6.28-.61a18.56,18.56,0,0,1,3.8,0l6.29.61V12.93A2,2,0,0,0,20.37,10.89Z" style="fill:#c2c1c0"/><ellipse cx="13.84" cy="16.61" rx="8.28" ry="1.15" style="fill:#c2c1c0"/><path d="M14.17,4.28.4,11.13v.25l2.23,1.38v8.16c-2.53,1.44.56,4.51.56,4.51s3.1-3.07.56-4.51V13.45l1.12.7V12.9a2.84,2.84,0,0,1,2.84-2.85H20.56a3,3,0,0,1,3,3v1.14L28,11.38v-.22Z" style="fill:#c2c1c0"/></g></svg>MBBS (IND), MRCP (UK)</div>
+                            </div>
+                            
+                            <div class="view-profile-text"><a href="#">View Profile</a></div>
+                            
+                        </div>
+                        
+                        <div class="doctor-dflex-block find-other-doc-margintop">
+                            <img class="doctor-img-height" src="./images/DrRamzdhan.png">
+
+                            <div class="img-margin-left">
+                                <div>Dr Ramdzhan</div>
+                                <div class="dr-desc-with-icon"><svg class="grad-icon-desc" viewBox="0 0 28 28"><g id="graduation-icon"><path d="M20.37,10.89H7.7a1.93,1.93,0,0,0-1.83,2v1.89l6.28-.61a18.56,18.56,0,0,1,3.8,0l6.29.61V12.93A2,2,0,0,0,20.37,10.89Z" style="fill:#c2c1c0"/><ellipse cx="13.84" cy="16.61" rx="8.28" ry="1.15" style="fill:#c2c1c0"/><path d="M14.17,4.28.4,11.13v.25l2.23,1.38v8.16c-2.53,1.44.56,4.51.56,4.51s3.1-3.07.56-4.51V13.45l1.12.7V12.9a2.84,2.84,0,0,1,2.84-2.85H20.56a3,3,0,0,1,3,3v1.14L28,11.38v-.22Z" style="fill:#c2c1c0"/></g></svg>MBBS (IND), MRCP (UK)</div>
+                            </div>
+                            
+                            <div class="view-profile-text"><a href="#">View Profile</a></div>
+                        </div> 
+
+                        <div class="doctor-dflex-block find-other-doc-margintop">
+                            <img class="doctor-img-height" src="./images/DrMohdKashfi.png">
+
+                            <div class="img-margin-left">
+                                <div>Dr Mohd Kashfi</div>
+                                <div class="dr-desc-with-icon"><svg class="grad-icon-desc" viewBox="0 0 28 28"><g id="graduation-icon"><path d="M20.37,10.89H7.7a1.93,1.93,0,0,0-1.83,2v1.89l6.28-.61a18.56,18.56,0,0,1,3.8,0l6.29.61V12.93A2,2,0,0,0,20.37,10.89Z" style="fill:#c2c1c0"/><ellipse cx="13.84" cy="16.61" rx="8.28" ry="1.15" style="fill:#c2c1c0"/><path d="M14.17,4.28.4,11.13v.25l2.23,1.38v8.16c-2.53,1.44.56,4.51.56,4.51s3.1-3.07.56-4.51V13.45l1.12.7V12.9a2.84,2.84,0,0,1,2.84-2.85H20.56a3,3,0,0,1,3,3v1.14L28,11.38v-.22Z" style="fill:#c2c1c0"/></g></svg>MBBS (IND), MRCP (UK)</div>
+                            </div>
+                            
+                            <div class="view-profile-text"><a href="#">View Profile</a></div>
+                        </div> 
+
+                    </div>
                 </div>
 
                 <!-- video block desktop only -->
-                <div class="col-lg-6 padding-0-mobile desktop-only">
-                    <div class="box-white-bg">
+                <div class="col-lg-6 padding-0-mobile desktop-only custom-mg-top">
 
-                        <!-- webcam video user display -->
-                        <video autoplay="true" id="" class="videoElement"></video>
-
-                        <!-- camera switch -->
-                        <div class="switch-row">
-                            <div class="icon-bg">
-                                <svg class="icon-mic-cam-wifi" viewBox="0 0 28 28"><g id="video"><path d="M0,8.38v11a2.7,2.7,0,0,0,2.7,2.7H19.84V5.68H2.7A2.7,2.7,0,0,0,0,8.38Z" style="fill:#c2c1c0"/><polygon points="21.18 10.21 21.18 17.79 28 21.19 28 6.67 21.18 10.21" style="fill:#c2c1c0"/></g></svg>
-                            </div>
-                            <div>Camera</div>
-                            <div class="switch-text">Switch</div>
-                            <label class="switch">
-                                <input type="checkbox" checked>
-                                <span class="slider round"></span>
-                            </label>                        
+                    <div class="video-consult-details-text">Video Consultation Details</div>
+                    <div class="box-white-bg" style="border-radius: 0 0 8px 8px;margin-top: unset;">                       
+                        <div class="video-details-subtext">Doctor</div>
+                        <div>Dr Sashini Seeni</div>
+                        <br>
+                        <div class="video-details-subtext">Date</div>
+                        <div>29 April 2020, Wednesday</div>
+                        <br>
+                        <div class="video-details-subtext">Time</div>
+                        <div>3:00 PM</div>
+                        <br>
+                        <div class="video-details-subtext">Link to your video Consultation</div>
+                        <div class="link-appt-dflex">
+                            <a class="link-appt-color" href="https://www.DoctorOnCall.com.my/videoConsultation?79123081">https://www.DoctorOnCall.com.my/videoConsultation?79123081</a>
+                            <svg width="28.75" height="30" viewBox="0 0 28.75 30"><defs><style>.a{fill:#408bf9;}</style></defs><g transform="translate(-4)"><path class="a" d="M10.25,0A1.259,1.259,0,0,0,9,1.25V2.5H5.25A1.208,1.208,0,0,0,4,3.75V8.125H32.75V3.75A1.208,1.208,0,0,0,31.5,2.5H27.75V1.25A1.259,1.259,0,0,0,26.5,0H25.25A1.259,1.259,0,0,0,24,1.25V2.5H12.75V1.25A1.259,1.259,0,0,0,11.5,0Zm0,1.25H11.5V5H10.25Zm15,0H26.5V5H25.25ZM4,9.375V28.75A1.208,1.208,0,0,0,5.25,30H31.5a1.208,1.208,0,0,0,1.25-1.25V9.375Zm6.25,3.75h3.125V16.25H10.25Zm4.375,0H17.75V16.25H14.625Zm4.375,0h3.125V16.25H19Zm4.375,0H26.5V16.25H23.375ZM10.25,17.5h3.125v3.125H10.25Zm4.375,0H17.75v3.125H14.625ZM19,17.5h3.125v3.125H19Zm4.375,0H26.5v3.125H23.375ZM10.25,21.875h3.125V25H10.25Zm4.375,0H17.75V25H14.625Zm4.375,0h3.125V25H19Zm4.375,0H26.5V25H23.375Zm0,0"/></g></svg>
                         </div>
-                        
-                        <!-- microphone switch -->
-                        <div class="switch-row">
-                            <div class="icon-bg">
-                                <svg class="icon-mic-cam-wifi" viewBox="0 0 28 28"><g id="mic-icon"><rect x="9.7" y="0.13" width="9.32" height="17.6" rx="4.66" style="fill:#c2c1c0"/><path d="M22.63,14.22a8.46,8.46,0,0,1-16.36,0H3.69A11,11,0,0,0,13.42,23v4.9h2.06V23a11,11,0,0,0,9.72-8.75Z" style="fill:#c2c1c0"/></g></svg>
-                            </div>
-                            <div>Microphone</div>
-                            <div class="switch-text">Switch</div>
-                            <label class="switch">
-                                <input type="checkbox">
-                                <span class="slider round"></span>
-                            </label>                        
-                        </div>                        
-                        
-                        <div class="dflex-wifi-desc">
-                            <div class="icon-bg margin-right-60">
-                                <svg class="icon-mic-cam-wifi" viewBox="0 0 28 28"><g id="connection-icon"><path d="M14,5.44a18.62,18.62,0,0,0-14,6.3l2.36,2.47C5.55,11.67,9.61,9.57,14,9.57s8.45,2.12,11.64,4.69L28,11.8A18.61,18.61,0,0,0,14,5.44Z" style="fill:#c2c1c0"/><path d="M13.87,12.6a12.66,12.66,0,0,0-9.18,3.93l2.23,2.34c2-1.31,4.45-2.76,7-2.76S19,17.61,21,19l2.21-2.3A12.66,12.66,0,0,0,13.87,12.6Z" style="fill:#c2c1c0"/><path d="M13.87,19.07a5.54,5.54,0,0,0-4.52,2.34L14,26.27l4.49-4.7A5.54,5.54,0,0,0,13.87,19.07Z" style="fill:#c2c1c0"/></g></svg>
-                            </div>
-                            <div>
-                                <div class="dflex-con-test-text">Connectivity Test <span class="testing-vid-audio-text">Testing Video/Audio quality</span></div>
-                                
-                                <!-- wifi progress bar -->
-                                <div class="connectivity-bar">
-                                    <div class="connectivity-bar-blue"></div>                                    
-                                </div>
 
-                            </div>
-                        </div>                        
-                        <a class="join-consult-btn">Join the Video Consultation</a>
+                        <a class="manage-appt-btn">Manage your Appointment</a>
+
+                        <p class="send-email-text-border">We will send an email and SMS reminder to you on the day of the consultation.</p>
+                        <p>Thank you for using our service.</p>
                     </div>
+
+                    <a class="join-consult-btn">Back To Homepage</a>
+
                 </div>
             </div>
         </div>
 
         <!-- floating button -->
-        <div class="join-consult-floating-btn"><a class="join-consult-btn" style="border-radius: unset;">Join the Video Consultation</a></div>
+        <div class="join-consult-floating-btn"><a class="join-consult-btn" style="border-radius: unset;">Back To Homepage</a></div>
 
     </body>
 </html>
