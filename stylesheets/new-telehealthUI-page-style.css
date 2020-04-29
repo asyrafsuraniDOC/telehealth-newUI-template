@@ -689,8 +689,18 @@ ______ ____   ____ _______ ______ _____
   margin:13px 0
 }
 
+.health-fullname-email-textfield{
+  border: 1px solid #E0E0E0;
+  border-radius: 4px;
+  font-size: 14px;
+  height: 40px;
+  margin-right: 10px;
+  text-indent: 15px;
+  width: 100%;
+}
+
 .health-age-number{
-  border: 1px solid #41C0F1;
+  border: 1px solid #E0E0E0;
   border-radius: 4px;
   font-size: 14px;
   height: 40px;
