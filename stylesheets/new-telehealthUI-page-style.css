@@ -1513,6 +1513,19 @@ ______ ____   ____ _______ ______ _____
   padding: 15px 40px;
 }
 
+.view-other-btn{
+  width: 100%;
+  border-radius: 4px;
+  display: block;
+  background: #EDEDED;
+  color: #140404;
+  cursor: pointer;
+  margin-top: 30px;
+  text-align: center;
+  text-decoration: none;
+  padding: 15px 40px;
+}
+
 .add-manage-btn-dflex{
   display: flex;
   align-items: center;
@@ -1666,7 +1679,7 @@ ______ ____   ____ _______ ______ _____
 .get-med-text{
   margin-top: 10px;
   line-height: 23px;
-  font-weight: bold;
+  font-weight: normal;
   font-size: 18px;
   color: #404040;
 }
@@ -1779,7 +1792,17 @@ ______ ____   ____ _______ ______ _____
 }
 
 .find-other-doc-margintop{
-  margin-top: 10px;
+  margin-top: 15px;
+  justify-content: space-between;
+}
+
+.find-other-doc-margintop svg{
+  width: 14px;
+}
+
+.view-other-subtext{
+  color: unset;
+  text-decoration: none;
 }
 
 .view-profile-text{
