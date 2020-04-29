@@ -638,6 +638,7 @@ ______ ____   ____ _______ ______ _____
   display: flex;
   justify-content: space-between;
   margin-top: 15px;
+  margin-bottom: 30px;
 }
 
 .health-back-btn{
@@ -901,6 +902,7 @@ ______ ____   ____ _______ ______ _____
   }
   .health-back-btn-display{
       padding:0 10px;
+      margin-bottom: unset;
   }
   .health-detail-box{
       border: unset;
@@ -1511,13 +1513,30 @@ ______ ____   ____ _______ ______ _____
   padding: 15px 40px;
 }
 
+.add-manage-btn-dflex{
+  display: flex;
+  align-items: center;
+}
+
 .manage-appt-btn{
   width:max-content;
   border-radius: 4px;
   display: flex;
   align-items: center;
-  background: #EDEDED;
-  color: #140404;
+  color: #525252;
+  margin-left: 35px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: underline;
+}
+
+.add-calendar-btn{
+  width:max-content;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  background: #41C0F1;
+  color: #fff;
   cursor: pointer;
   margin: 20px 0;
   text-align: center;
@@ -1824,6 +1843,14 @@ ______ ____   ____ _______ ______ _____
   .view-profile-text{
       right: 10px;
   }
+
+  .add-manage-btn-dflex{
+    display: inline-block
+  }
+  
+  .manage-appt-btn{
+    margin-left: unset;
+  }
 }
 
 @media(max-width: 360px){
@@ -1898,5 +1925,25 @@ border: 1px solid #D9D9D9;
 border-radius: 50%;
 }
 
+
+/* Stars CSS*/
+.star{
+  position:relative;
+  /* top:3px; */
+  width:14px;
+}
+.star path{
+  fill:gold;
+}
+.star-rating{
+  color: #aaa;
+  font-size: 12px;
+  position: relative;
+  text-align: left;
+  top: -1px;
+}
+.product-star-icon-column .star-rating{
+  display:inline-block;
+}
 
 
