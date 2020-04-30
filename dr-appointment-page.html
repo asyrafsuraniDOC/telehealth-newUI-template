@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="active-menu" content="">
+        <title>Doctor Appointment Page</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="keywords" content="">
+        <meta name="description" content="Doctor On Call is Malaysia's fastest way to see a doctor and get medicine on your computer, tablet or phone- from the comfort of home.">
+        <meta name="author" content=""> 
+        <link rel="stylesheet" type="text/css" href="./stylesheets/new-telehealthUI-page-style.css">
+
+        <style>
+
+            body{
+                background-color: #FAFAFA;
+            }
+
+            .mnge-appt-btn{
+                width: max-content;
+                color: #140404;
+                cursor: pointer;
+                background-color: #EDEDED;
+                border: none;
+                border-radius: 4px;
+                font-size: 14px;
+                margin-right: 20px;
+                padding: 15px;
+            }
+
+            .filter-btn{
+                width: max-content;
+                color: #140404;
+                cursor: pointer;
+                background-color: #EDEDED;
+                border: none;
+                border-radius: 4px;
+                font-size: 14px;
+                padding: 15px;
+            }
+
+            .join-vid-btn{
+                width: 80%;
+                color: #fff;
+                cursor: pointer;
+                background-color: #41C0F1;
+                border: none;
+                border-radius: 4px;
+                font-size: 14px;
+                padding: 15px;
+                margin-bottom: 20px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .join-vid-btn svg{
+                width: 20px;
+                margin-right:10px
+            }
+
+            .reschedule-btn{
+                width: 80%;
+                color: #140404;
+                cursor: pointer;
+                background-color: #EDEDED;
+                border: none;
+                border-radius: 4px;
+                font-size: 14px;
+                padding: 15px;
+            }
+
+            .manage-filter-dflex{
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+                margin-right: -15px;
+            }
+
+            .active-appointment-text{
+                margin-left: -15px;
+                margin-bottom: 15px;
+            }
+
+            .past-appointment-text{
+                margin: 40px 0px 15px -15px;
+            }
+
+            .bg-padding-white{
+                padding: 20px;
+                background-color: #fff;
+                margin-bottom: 10px;
+            }
+
+            .link-attach-prescription{
+                color: #41C0F1;
+                text-decoration: none;
+            }
+
+            .header-bg-custom{
+                background-color: #41C0F1;
+                color: #fff;
+            }
+            .header a:hover {
+                color: unset;
+            }
+
+            @media(max-width: 768px){
+                .manage-filter-dflex{
+                    margin-right: unset;
+                }
+
+                .active-appointment-text{
+                    margin-left: unset;
+                    margin-top: 35px;
+                }
+
+                .past-appointment-text{
+                    margin: 40px 0px 15px 0;
+                }
+
+                .join-vid-btn{
+                    width: 100%;
+                }
+
+                .reschedule-btn{
+                    width: 100%;
+                }
+
+                .appt-block-margin-mobile{
+                    margin-bottom: 30px;
+                }
+
+            }
+
+            /* Hamburger Style CSS */
+            #menuToggle
+            {
+                display: block;
+                position: relative;
+                /* top: 50px; */
+                left: 0;
+                z-index: 1;
+                -webkit-user-select: none;
+                user-select: none;
+            }
+
+            #menuToggle a
+            {
+                text-decoration: none;
+                color: #232323;            
+                transition: color 0.3s ease;
+            }
+
+            #menuToggle a:hover
+            {
+                color: tomato;
+            }
+
+            #menuToggle input
+            {
+                display: block;
+                width: 40px;
+                height: 32px;
+                position: absolute;
+                top: -7px;
+                left: -5px;            
+                cursor: pointer;            
+                opacity: 0; /* hide this */
+                z-index: 2; /* and place it over the hamburger */            
+                -webkit-touch-callout: none;
+            }
+
+            #menuToggle span
+            {
+                display: block;
+                width: 33px;
+                height: 4px;
+                margin-bottom: 5px;
+                position: relative;            
+                background: #fff;
+                border-radius: 3px;            
+                z-index: 1;            
+                transform-origin: 4px 0px;            
+                transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+                            background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+                            opacity 0.55s ease;
+            }
+
+            #menuToggle span:first-child
+            {
+                transform-origin: 0% 0%;
+            }
+
+            #menuToggle span:nth-last-child(2)
+            {
+                transform-origin: 0% 100%;
+            }
+
+            /* 
+            * Transform all the slices of hamburger
+            * into a crossmark.
+            */
+            #menuToggle input:checked ~ span
+            {
+                opacity: 1;
+                transform: rotate(45deg) translate(-2px, -1px);
+                background: #ffff;
+            }
+
+            #menuToggle input:checked ~ span:nth-last-child(3)
+            {
+                opacity: 0;
+                transform: rotate(0deg) scale(0.2, 0.2);
+            }
+
+            #menuToggle input:checked ~ span:nth-last-child(2)
+            {
+                transform: rotate(-45deg) translate(0, -1px);
+            }
+
+            #menu
+            {
+                display: grid;
+                position: fixed;
+                width: 300px;
+                margin: 29px 0px 0px -252px;
+                padding: 50px;
+                /* padding-top: 125px; */
+                background: #ededed;
+                list-style-type: none;
+                -webkit-font-smoothing: antialiased;
+                transform-origin: 0% 0%;
+                transform: translate(100%, 0);
+                transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+            }
+
+            #menu li
+            {
+                padding: 10px 0;
+                font-size: 22px;
+            }
+
+            #menuToggle input:checked ~ ul
+            {
+                transform: none;
+            }
+
+            @media(max-width: 768px){
+                #menu
+                {
+                    margin: 20px 0px 0px -252px;
+                }
+            }
+
+            .open-daily-text-color{
+                color: #fff;
+            }
+
+        </style>
+        
+    </head>
+
+    <body>
+
+        <!-- start of header -->
+        <!-- start container for header -->
+        <header class="container-fluid header header-bg-custom desktop-only">
+            <!-- start a tag for logo -->
+            <a href="#">
+            <picture>
+                <!-- <source srcset="https://doccampaign.s3-ap-southeast-1.amazonaws.com/coronavirus/home/doctoroncall-logo-webp.webp" type="image/webp"> -->
+                <img src="./images/DOC-Logo-white.png" class="header-logo" alt="DoctorOnCall Logo" loading="lazy">
+            </picture>
+            </a>
+            <!-- end of a tag for logo -->           
+
+            <div style="display: flex;align-items: center;">
+                <a class="health-contact-spprt-btn open-daily-text-color" href="#">
+                    <img src="./images/icon-chat-bubble.png" style="width: auto;height: 20px;margin-right: 10px;">
+                    Open Daily 8 AM - 12 AM
+                </a>
+
+                <a class="health-contact-spprt-btn open-daily-text-color" href="#">
+                    <svg style="margin-right: 10px;" width="20.847" height="24.058" viewBox="0 0 20.847 24.058"><defs><style>.a{fill:#fff;}</style></defs><g transform="matrix(-0.588, -0.809, 0.809, -0.588, 7.75, 29.073)"><path class="a" d="M23.742,13.2l-3.248,3.248a.514.514,0,0,1-.61.078L16.4,14.555a.583.583,0,0,1-.3-.5l-.052-2.674a.523.523,0,0,0-.4-.479,14.448,14.448,0,0,0-7.106.157.723.723,0,0,0-.505.644l-.174,2.36a.688.688,0,0,1-.331.531l-3.1,1.864a.557.557,0,0,1-.679-.087L.707,13.361a.488.488,0,0,1,0-.714c2.186-1.829,12.872-9.9,23.026-.148a.488.488,0,0,1,.009.7Z" transform="translate(0 0)"/></g></svg>
+                    +603 8408 2000
+                </a>
+
+                <!-- hamburger menu -->
+                <nav role="navigation" style="margin-left: 15px;">
+                    <div id="menuToggle">
+                        <input type="checkbox" />
+                        <span></span>
+                        <span></span>
+                        <span></span>
+
+                        <ul id="menu">
+                        <a href="#"><li>Home</li></a>
+                        <a href="#"><li>About</li></a>
+                        <a href="#"><li>Info</li></a>
+                        <a href="#"><li>Contact</li></a>
+                        <a href="https://erikterwan.com/" target="_blank"><li>Show me more</li></a>
+                        </ul>
+                    </div>
+                </nav>
+                
+            </div>
+            
+        </header>
+        <!-- end of header container -->
+        <!-- end of header -->
+
+        <div class="container">
+            <div style="text-align: center;font-size: 34px;margin:30px 0">Appointment Page</div>
+
+            <div class="manage-filter-dflex">
+                <a class="mnge-appt-btn">Manage Your Booking</a>
+                <a class="filter-btn">Filter</a>            
+            </div>
+
+            <div class="active-appointment-text">Active Appointments</div>
+            <div class="row bg-padding-white">
+                
+                <div class="col-md-4 appt-block-margin-mobile">
+                    <button class="join-vid-btn">
+                        <svg viewBox="0 0 17.252 10.105"><defs><style>.a{fill:#fff;}</style></defs><g transform="translate(0 -5.68)"><path class="a" d="M0,7.344v6.778a1.609,1.609,0,0,0,1.548,1.664h9.824V5.68H1.548A1.609,1.609,0,0,0,0,7.344Z" transform="translate(0 0)"/><path class="a" d="M21.18,8.765v4.486l5.484,2.012V6.67Z" transform="translate(-9.412 -0.194)"/></g></svg>
+                        Join Video Call
+                    </button>
+                    <button class="reschedule-btn">Reschedule Request</button>
+                </div>
+                <div class="col-md-4 appt-block-margin-mobile">
+                    <div class="video-details-subtext">Date</div>
+                    <div>29 April 2020, Wednesday</div>
+                    <br>
+                    <div class="video-details-subtext">Time</div>
+                    <div>3:00 PM</div>
+                </div>
+                <div class="col-md-4 appt-block-margin-mobile">
+                    <div class="video-details-subtext">Doctor's Detail</div>
+                    <div class="patient-health-display-block">                        
+                        <img class="doctor-img-height" src="./images/DrSashini.png">
+
+                        <div class="img-margin-left">
+                            <div>Dr Sasheeni Seeni</div>
+                            <div class="dr-desc-with-icon" style="margin:7px 0"><svg class="grad-icon-desc" viewBox="0 0 28 28"><g id="graduation-icon"><path d="M20.37,10.89H7.7a1.93,1.93,0,0,0-1.83,2v1.89l6.28-.61a18.56,18.56,0,0,1,3.8,0l6.29.61V12.93A2,2,0,0,0,20.37,10.89Z" style="fill:#c2c1c0"/><ellipse cx="13.84" cy="16.61" rx="8.28" ry="1.15" style="fill:#c2c1c0"/><path d="M14.17,4.28.4,11.13v.25l2.23,1.38v8.16c-2.53,1.44.56,4.51.56,4.51s3.1-3.07.56-4.51V13.45l1.12.7V12.9a2.84,2.84,0,0,1,2.84-2.85H20.56a3,3,0,0,1,3,3v1.14L28,11.38v-.22Z" style="fill:#c2c1c0"/></g></svg>MBBS (IND), MRCP (UK)</div>
+                            <div class="dr-desc-with-icon"><svg class="grad-icon-desc" style="fill:#c2c1c0" viewBox="0 0 50 50"><path d="M 8 0 C 7.207031 0 6.511719 0.453125 6.1875 1.125 C 5.773438 1.214844 5.21875 1.355469 4.65625 1.5625 C 4.09375 1.769531 3.515625 2.042969 3 2.46875 C 2.484375 2.894531 2 3.550781 2 4.375 C 2 4.734375 2.058594 5.148438 2.15625 5.8125 C 2.253906 6.476563 2.394531 7.355469 2.59375 8.34375 C 2.988281 10.320313 3.597656 12.835938 4.40625 15.4375 C 6 20.570313 8.277344 26.074219 12.03125 28.34375 C 12.027344 28.425781 12 28.507813 12 28.59375 C 12 29.789063 12.355469 31.214844 12.96875 32.46875 C 13.273438 33.09375 13.648438 33.652344 14.125 34.125 C 14.378906 34.378906 14.691406 34.621094 15.03125 34.78125 C 15.066406 37.382813 15.316406 40.679688 17.15625 43.53125 C 19.175781 46.664063 23.117188 49 30 49 C 36.265625 49 39.933594 46.410156 41.84375 43.46875 C 43.414063 41.050781 43.859375 38.53125 43.96875 36.9375 C 47.367188 36.464844 50 33.527344 50 30 C 50 26.148438 46.851563 23 43 23 C 39.144531 23 36 26.148438 36 30 C 36 33.492188 38.585938 36.390625 41.9375 36.90625 C 41.816406 38.269531 41.414063 40.433594 40.15625 42.375 C 38.566406 44.824219 35.734375 47 30 47 C 23.550781 47 20.488281 44.984375 18.84375 42.4375 C 17.347656 40.121094 17.074219 37.214844 17.03125 34.75 C 17.34375 34.589844 17.636719 34.359375 17.875 34.125 C 18.347656 33.652344 18.726563 33.09375 19.03125 32.46875 C 19.644531 31.214844 20 29.789063 20 28.59375 C 20 28.507813 19.972656 28.425781 19.96875 28.34375 C 23.722656 26.074219 26 20.570313 27.59375 15.4375 C 28.402344 12.835938 29.011719 10.320313 29.40625 8.34375 C 29.605469 7.355469 29.746094 6.476563 29.84375 5.8125 C 29.941406 5.148438 30 4.734375 30 4.375 C 30 3.550781 29.515625 2.894531 29 2.46875 C 28.484375 2.042969 27.90625 1.769531 27.34375 1.5625 C 26.78125 1.355469 26.226563 1.214844 25.8125 1.125 C 25.792969 1.121094 25.800781 1.128906 25.78125 1.125 C 25.457031 0.460938 24.789063 0 24 0 C 22.894531 0 22 0.894531 22 2 C 22 3.105469 22.894531 4 24 4 C 24.675781 4 25.261719 3.667969 25.625 3.15625 C 25.933594 3.226563 26.292969 3.304688 26.65625 3.4375 C 27.09375 3.597656 27.515625 3.804688 27.75 4 C 27.984375 4.195313 28 4.273438 28 4.375 C 28 4.414063 27.96875 4.90625 27.875 5.53125 C 27.78125 6.15625 27.628906 6.976563 27.4375 7.9375 C 27.054688 9.855469 26.46875 12.328125 25.6875 14.84375 C 24.175781 19.710938 21.777344 24.71875 19.09375 26.5 C 18.863281 26.328125 18.617188 26.191406 18.375 26.125 C 17.503906 25.882813 16.753906 26.03125 16 26.03125 C 15.246094 26.03125 14.496094 25.886719 13.625 26.125 C 13.382813 26.191406 13.136719 26.328125 12.90625 26.5 C 10.222656 24.71875 7.824219 19.710938 6.3125 14.84375 C 5.53125 12.328125 4.945313 9.855469 4.5625 7.9375 C 4.371094 6.976563 4.21875 6.15625 4.125 5.53125 C 4.03125 4.90625 4 4.414063 4 4.375 C 4 4.273438 4.015625 4.195313 4.25 4 C 4.484375 3.804688 4.90625 3.597656 5.34375 3.4375 C 5.707031 3.304688 6.066406 3.226563 6.375 3.15625 C 6.738281 3.667969 7.324219 4 8 4 C 9.105469 4 10 3.105469 10 2 C 10 0.894531 9.105469 0 8 0 Z M 43 25 C 45.769531 25 48 27.230469 48 30 C 48 32.738281 45.820313 34.949219 43.09375 35 C 43.0625 35 43.03125 35 43 35 C 40.226563 35 38 32.769531 38 30 C 38 27.230469 40.226563 25 43 25 Z M 43 27 C 41.355469 27 40 28.355469 40 30 C 40 31.644531 41.355469 33 43 33 C 44.644531 33 46 31.644531 46 30 C 46 28.355469 44.644531 27 43 27 Z M 14.8125 28.03125 C 15.132813 28.03125 15.550781 28.03125 16 28.03125 C 16.902344 28.03125 17.628906 28.003906 17.84375 28.0625 C 17.953125 28.09375 17.929688 28.050781 17.9375 28.0625 C 17.945313 28.074219 18 28.226563 18 28.59375 C 18 29.324219 17.691406 30.625 17.21875 31.59375 C 16.980469 32.078125 16.710938 32.476563 16.46875 32.71875 C 16.277344 32.910156 16.144531 32.949219 16.0625 32.96875 C 16.019531 32.964844 15.980469 32.964844 15.9375 32.96875 C 15.855469 32.949219 15.722656 32.910156 15.53125 32.71875 C 15.289063 32.476563 15.019531 32.078125 14.78125 31.59375 C 14.308594 30.625 14 29.324219 14 28.59375 C 14 28.226563 14.054688 28.074219 14.0625 28.0625 C 14.070313 28.050781 14.046875 28.09375 14.15625 28.0625 C 14.265625 28.03125 14.492188 28.03125 14.8125 28.03125 Z M 43 29 C 43.566406 29 44 29.433594 44 30 C 44 30.566406 43.566406 31 43 31 C 42.433594 31 42 30.566406 42 30 C 42 29.433594 42.433594 29 43 29 Z"></path></svg>General Practitioner</div>
+                        </div>
+                    </div>
+                </div>                
+            </div>
+
+
+            <div class="past-appointment-text">Past Appointments</div>
+            <div class="row bg-padding-white">                
+                <div class="col-md-4 appt-block-margin-mobile">
+                    <button class="join-vid-btn">
+                        <svg viewBox="0 0 17.252 10.105"><defs><style>.a{fill:#fff;}</style></defs><g transform="translate(0 -5.68)"><path class="a" d="M0,7.344v6.778a1.609,1.609,0,0,0,1.548,1.664h9.824V5.68H1.548A1.609,1.609,0,0,0,0,7.344Z" transform="translate(0 0)"/><path class="a" d="M21.18,8.765v4.486l5.484,2.012V6.67Z" transform="translate(-9.412 -0.194)"/></g></svg>
+                        Join Video Call
+                    </button>
+                    <button class="reschedule-btn">Reschedule Request</button>
+                </div>
+                <div class="col-md-4 appt-block-margin-mobile">
+                    <div class="video-details-subtext">Date</div>
+                    <div>29 April 2020, Wednesday</div>
+                    <br>
+                    <div class="video-details-subtext">Time</div>
+                    <div>3:00 PM</div>
+                </div>
+                <div class="col-md-4 appt-block-margin-mobile">
+                    <div class="video-details-subtext">Doctor's Detail</div>
+                    <div class="patient-health-display-block">                        
+                        <img class="doctor-img-height" src="./images/DrSashini.png">
+
+                        <div class="img-margin-left">
+                            <div>Dr Sasheeni Seeni</div>
+                            <div class="dr-desc-with-icon" style="margin:7px 0"><svg class="grad-icon-desc" viewBox="0 0 28 28"><g id="graduation-icon"><path d="M20.37,10.89H7.7a1.93,1.93,0,0,0-1.83,2v1.89l6.28-.61a18.56,18.56,0,0,1,3.8,0l6.29.61V12.93A2,2,0,0,0,20.37,10.89Z" style="fill:#c2c1c0"/><ellipse cx="13.84" cy="16.61" rx="8.28" ry="1.15" style="fill:#c2c1c0"/><path d="M14.17,4.28.4,11.13v.25l2.23,1.38v8.16c-2.53,1.44.56,4.51.56,4.51s3.1-3.07.56-4.51V13.45l1.12.7V12.9a2.84,2.84,0,0,1,2.84-2.85H20.56a3,3,0,0,1,3,3v1.14L28,11.38v-.22Z" style="fill:#c2c1c0"/></g></svg>MBBS (IND), MRCP (UK)</div>
+                            <div class="dr-desc-with-icon"><svg class="grad-icon-desc" style="fill:#c2c1c0" viewBox="0 0 50 50"><path d="M 8 0 C 7.207031 0 6.511719 0.453125 6.1875 1.125 C 5.773438 1.214844 5.21875 1.355469 4.65625 1.5625 C 4.09375 1.769531 3.515625 2.042969 3 2.46875 C 2.484375 2.894531 2 3.550781 2 4.375 C 2 4.734375 2.058594 5.148438 2.15625 5.8125 C 2.253906 6.476563 2.394531 7.355469 2.59375 8.34375 C 2.988281 10.320313 3.597656 12.835938 4.40625 15.4375 C 6 20.570313 8.277344 26.074219 12.03125 28.34375 C 12.027344 28.425781 12 28.507813 12 28.59375 C 12 29.789063 12.355469 31.214844 12.96875 32.46875 C 13.273438 33.09375 13.648438 33.652344 14.125 34.125 C 14.378906 34.378906 14.691406 34.621094 15.03125 34.78125 C 15.066406 37.382813 15.316406 40.679688 17.15625 43.53125 C 19.175781 46.664063 23.117188 49 30 49 C 36.265625 49 39.933594 46.410156 41.84375 43.46875 C 43.414063 41.050781 43.859375 38.53125 43.96875 36.9375 C 47.367188 36.464844 50 33.527344 50 30 C 50 26.148438 46.851563 23 43 23 C 39.144531 23 36 26.148438 36 30 C 36 33.492188 38.585938 36.390625 41.9375 36.90625 C 41.816406 38.269531 41.414063 40.433594 40.15625 42.375 C 38.566406 44.824219 35.734375 47 30 47 C 23.550781 47 20.488281 44.984375 18.84375 42.4375 C 17.347656 40.121094 17.074219 37.214844 17.03125 34.75 C 17.34375 34.589844 17.636719 34.359375 17.875 34.125 C 18.347656 33.652344 18.726563 33.09375 19.03125 32.46875 C 19.644531 31.214844 20 29.789063 20 28.59375 C 20 28.507813 19.972656 28.425781 19.96875 28.34375 C 23.722656 26.074219 26 20.570313 27.59375 15.4375 C 28.402344 12.835938 29.011719 10.320313 29.40625 8.34375 C 29.605469 7.355469 29.746094 6.476563 29.84375 5.8125 C 29.941406 5.148438 30 4.734375 30 4.375 C 30 3.550781 29.515625 2.894531 29 2.46875 C 28.484375 2.042969 27.90625 1.769531 27.34375 1.5625 C 26.78125 1.355469 26.226563 1.214844 25.8125 1.125 C 25.792969 1.121094 25.800781 1.128906 25.78125 1.125 C 25.457031 0.460938 24.789063 0 24 0 C 22.894531 0 22 0.894531 22 2 C 22 3.105469 22.894531 4 24 4 C 24.675781 4 25.261719 3.667969 25.625 3.15625 C 25.933594 3.226563 26.292969 3.304688 26.65625 3.4375 C 27.09375 3.597656 27.515625 3.804688 27.75 4 C 27.984375 4.195313 28 4.273438 28 4.375 C 28 4.414063 27.96875 4.90625 27.875 5.53125 C 27.78125 6.15625 27.628906 6.976563 27.4375 7.9375 C 27.054688 9.855469 26.46875 12.328125 25.6875 14.84375 C 24.175781 19.710938 21.777344 24.71875 19.09375 26.5 C 18.863281 26.328125 18.617188 26.191406 18.375 26.125 C 17.503906 25.882813 16.753906 26.03125 16 26.03125 C 15.246094 26.03125 14.496094 25.886719 13.625 26.125 C 13.382813 26.191406 13.136719 26.328125 12.90625 26.5 C 10.222656 24.71875 7.824219 19.710938 6.3125 14.84375 C 5.53125 12.328125 4.945313 9.855469 4.5625 7.9375 C 4.371094 6.976563 4.21875 6.15625 4.125 5.53125 C 4.03125 4.90625 4 4.414063 4 4.375 C 4 4.273438 4.015625 4.195313 4.25 4 C 4.484375 3.804688 4.90625 3.597656 5.34375 3.4375 C 5.707031 3.304688 6.066406 3.226563 6.375 3.15625 C 6.738281 3.667969 7.324219 4 8 4 C 9.105469 4 10 3.105469 10 2 C 10 0.894531 9.105469 0 8 0 Z M 43 25 C 45.769531 25 48 27.230469 48 30 C 48 32.738281 45.820313 34.949219 43.09375 35 C 43.0625 35 43.03125 35 43 35 C 40.226563 35 38 32.769531 38 30 C 38 27.230469 40.226563 25 43 25 Z M 43 27 C 41.355469 27 40 28.355469 40 30 C 40 31.644531 41.355469 33 43 33 C 44.644531 33 46 31.644531 46 30 C 46 28.355469 44.644531 27 43 27 Z M 14.8125 28.03125 C 15.132813 28.03125 15.550781 28.03125 16 28.03125 C 16.902344 28.03125 17.628906 28.003906 17.84375 28.0625 C 17.953125 28.09375 17.929688 28.050781 17.9375 28.0625 C 17.945313 28.074219 18 28.226563 18 28.59375 C 18 29.324219 17.691406 30.625 17.21875 31.59375 C 16.980469 32.078125 16.710938 32.476563 16.46875 32.71875 C 16.277344 32.910156 16.144531 32.949219 16.0625 32.96875 C 16.019531 32.964844 15.980469 32.964844 15.9375 32.96875 C 15.855469 32.949219 15.722656 32.910156 15.53125 32.71875 C 15.289063 32.476563 15.019531 32.078125 14.78125 31.59375 C 14.308594 30.625 14 29.324219 14 28.59375 C 14 28.226563 14.054688 28.074219 14.0625 28.0625 C 14.070313 28.050781 14.046875 28.09375 14.15625 28.0625 C 14.265625 28.03125 14.492188 28.03125 14.8125 28.03125 Z M 43 29 C 43.566406 29 44 29.433594 44 30 C 44 30.566406 43.566406 31 43 31 C 42.433594 31 42 30.566406 42 30 C 42 29.433594 42.433594 29 43 29 Z"></path></svg>General Practitioner</div>
+                        </div>
+                    </div>
+                </div>                
+            </div>
+
+            <div class="row bg-padding-white">                
+                <div class="col-md-4 appt-block-margin-mobile">
+                    <button class="join-vid-btn">
+                        <svg viewBox="0 0 17.252 10.105"><defs><style>.a{fill:#fff;}</style></defs><g transform="translate(0 -5.68)"><path class="a" d="M0,7.344v6.778a1.609,1.609,0,0,0,1.548,1.664h9.824V5.68H1.548A1.609,1.609,0,0,0,0,7.344Z" transform="translate(0 0)"/><path class="a" d="M21.18,8.765v4.486l5.484,2.012V6.67Z" transform="translate(-9.412 -0.194)"/></g></svg>
+                        Join Video Call
+                    </button>
+                    <button class="reschedule-btn">Reschedule Request</button>
+                </div>
+                <div class="col-md-4 appt-block-margin-mobile">
+                    <div class="video-details-subtext">Date</div>
+                    <div>29 April 2020, Wednesday</div>
+                    <br>
+                    <div class="video-details-subtext">Time</div>
+                    <div>3:00 PM</div>
+                </div>
+                <div class="col-md-4 appt-block-margin-mobile">
+                    <div class="video-details-subtext">Doctor's Detail</div>
+                    <div class="patient-health-display-block">                        
+                        <img class="doctor-img-height" src="./images/DrSashini.png">
+
+                        <div class="img-margin-left">
+                            <div>Dr Sasheeni Seeni</div>
+                            <div class="dr-desc-with-icon" style="margin:7px 0"><svg class="grad-icon-desc" viewBox="0 0 28 28"><g id="graduation-icon"><path d="M20.37,10.89H7.7a1.93,1.93,0,0,0-1.83,2v1.89l6.28-.61a18.56,18.56,0,0,1,3.8,0l6.29.61V12.93A2,2,0,0,0,20.37,10.89Z" style="fill:#c2c1c0"/><ellipse cx="13.84" cy="16.61" rx="8.28" ry="1.15" style="fill:#c2c1c0"/><path d="M14.17,4.28.4,11.13v.25l2.23,1.38v8.16c-2.53,1.44.56,4.51.56,4.51s3.1-3.07.56-4.51V13.45l1.12.7V12.9a2.84,2.84,0,0,1,2.84-2.85H20.56a3,3,0,0,1,3,3v1.14L28,11.38v-.22Z" style="fill:#c2c1c0"/></g></svg>MBBS (IND), MRCP (UK)</div>
+                            <div class="dr-desc-with-icon"><svg class="grad-icon-desc" style="fill:#c2c1c0" viewBox="0 0 50 50"><path d="M 8 0 C 7.207031 0 6.511719 0.453125 6.1875 1.125 C 5.773438 1.214844 5.21875 1.355469 4.65625 1.5625 C 4.09375 1.769531 3.515625 2.042969 3 2.46875 C 2.484375 2.894531 2 3.550781 2 4.375 C 2 4.734375 2.058594 5.148438 2.15625 5.8125 C 2.253906 6.476563 2.394531 7.355469 2.59375 8.34375 C 2.988281 10.320313 3.597656 12.835938 4.40625 15.4375 C 6 20.570313 8.277344 26.074219 12.03125 28.34375 C 12.027344 28.425781 12 28.507813 12 28.59375 C 12 29.789063 12.355469 31.214844 12.96875 32.46875 C 13.273438 33.09375 13.648438 33.652344 14.125 34.125 C 14.378906 34.378906 14.691406 34.621094 15.03125 34.78125 C 15.066406 37.382813 15.316406 40.679688 17.15625 43.53125 C 19.175781 46.664063 23.117188 49 30 49 C 36.265625 49 39.933594 46.410156 41.84375 43.46875 C 43.414063 41.050781 43.859375 38.53125 43.96875 36.9375 C 47.367188 36.464844 50 33.527344 50 30 C 50 26.148438 46.851563 23 43 23 C 39.144531 23 36 26.148438 36 30 C 36 33.492188 38.585938 36.390625 41.9375 36.90625 C 41.816406 38.269531 41.414063 40.433594 40.15625 42.375 C 38.566406 44.824219 35.734375 47 30 47 C 23.550781 47 20.488281 44.984375 18.84375 42.4375 C 17.347656 40.121094 17.074219 37.214844 17.03125 34.75 C 17.34375 34.589844 17.636719 34.359375 17.875 34.125 C 18.347656 33.652344 18.726563 33.09375 19.03125 32.46875 C 19.644531 31.214844 20 29.789063 20 28.59375 C 20 28.507813 19.972656 28.425781 19.96875 28.34375 C 23.722656 26.074219 26 20.570313 27.59375 15.4375 C 28.402344 12.835938 29.011719 10.320313 29.40625 8.34375 C 29.605469 7.355469 29.746094 6.476563 29.84375 5.8125 C 29.941406 5.148438 30 4.734375 30 4.375 C 30 3.550781 29.515625 2.894531 29 2.46875 C 28.484375 2.042969 27.90625 1.769531 27.34375 1.5625 C 26.78125 1.355469 26.226563 1.214844 25.8125 1.125 C 25.792969 1.121094 25.800781 1.128906 25.78125 1.125 C 25.457031 0.460938 24.789063 0 24 0 C 22.894531 0 22 0.894531 22 2 C 22 3.105469 22.894531 4 24 4 C 24.675781 4 25.261719 3.667969 25.625 3.15625 C 25.933594 3.226563 26.292969 3.304688 26.65625 3.4375 C 27.09375 3.597656 27.515625 3.804688 27.75 4 C 27.984375 4.195313 28 4.273438 28 4.375 C 28 4.414063 27.96875 4.90625 27.875 5.53125 C 27.78125 6.15625 27.628906 6.976563 27.4375 7.9375 C 27.054688 9.855469 26.46875 12.328125 25.6875 14.84375 C 24.175781 19.710938 21.777344 24.71875 19.09375 26.5 C 18.863281 26.328125 18.617188 26.191406 18.375 26.125 C 17.503906 25.882813 16.753906 26.03125 16 26.03125 C 15.246094 26.03125 14.496094 25.886719 13.625 26.125 C 13.382813 26.191406 13.136719 26.328125 12.90625 26.5 C 10.222656 24.71875 7.824219 19.710938 6.3125 14.84375 C 5.53125 12.328125 4.945313 9.855469 4.5625 7.9375 C 4.371094 6.976563 4.21875 6.15625 4.125 5.53125 C 4.03125 4.90625 4 4.414063 4 4.375 C 4 4.273438 4.015625 4.195313 4.25 4 C 4.484375 3.804688 4.90625 3.597656 5.34375 3.4375 C 5.707031 3.304688 6.066406 3.226563 6.375 3.15625 C 6.738281 3.667969 7.324219 4 8 4 C 9.105469 4 10 3.105469 10 2 C 10 0.894531 9.105469 0 8 0 Z M 43 25 C 45.769531 25 48 27.230469 48 30 C 48 32.738281 45.820313 34.949219 43.09375 35 C 43.0625 35 43.03125 35 43 35 C 40.226563 35 38 32.769531 38 30 C 38 27.230469 40.226563 25 43 25 Z M 43 27 C 41.355469 27 40 28.355469 40 30 C 40 31.644531 41.355469 33 43 33 C 44.644531 33 46 31.644531 46 30 C 46 28.355469 44.644531 27 43 27 Z M 14.8125 28.03125 C 15.132813 28.03125 15.550781 28.03125 16 28.03125 C 16.902344 28.03125 17.628906 28.003906 17.84375 28.0625 C 17.953125 28.09375 17.929688 28.050781 17.9375 28.0625 C 17.945313 28.074219 18 28.226563 18 28.59375 C 18 29.324219 17.691406 30.625 17.21875 31.59375 C 16.980469 32.078125 16.710938 32.476563 16.46875 32.71875 C 16.277344 32.910156 16.144531 32.949219 16.0625 32.96875 C 16.019531 32.964844 15.980469 32.964844 15.9375 32.96875 C 15.855469 32.949219 15.722656 32.910156 15.53125 32.71875 C 15.289063 32.476563 15.019531 32.078125 14.78125 31.59375 C 14.308594 30.625 14 29.324219 14 28.59375 C 14 28.226563 14.054688 28.074219 14.0625 28.0625 C 14.070313 28.050781 14.046875 28.09375 14.15625 28.0625 C 14.265625 28.03125 14.492188 28.03125 14.8125 28.03125 Z M 43 29 C 43.566406 29 44 29.433594 44 30 C 44 30.566406 43.566406 31 43 31 C 42.433594 31 42 30.566406 42 30 C 42 29.433594 42.433594 29 43 29 Z"></path></svg>General Practitioner</div>
+                        </div>
+                    </div>
+                </div>                
+            </div>
+
+        </div>
+
+        <div style="height: 50px;"></div>
+    </body>
+</html>

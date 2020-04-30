@@ -791,13 +791,13 @@ ______ ____   ____ _______ ______ _____
 .patient-health-display-block{
   display: flex;
   align-items: center;
-  border-bottom: 1px solid #F0F0F0;
-  padding-bottom: 15px;
+  /* border-bottom: 1px solid #F0F0F0;
+  padding-bottom: 15px; */
 }
 
 .patient-health-profile{
   padding: 5px;
-  background: #FFCB79;
+  background: #A0D1BB;
   color: #fff;
   border-radius: 50%;
   width: 50px;

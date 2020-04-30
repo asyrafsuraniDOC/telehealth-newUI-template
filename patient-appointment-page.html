@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="active-menu" content="">
+        <title>Patient Appointment Page</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="keywords" content="">
+        <meta name="description" content="Doctor On Call is Malaysia's fastest way to see a doctor and get medicine on your computer, tablet or phone- from the comfort of home.">
+        <meta name="author" content=""> 
+        <link rel="stylesheet" type="text/css" href="./stylesheets/new-telehealthUI-page-style.css">
+
+        <style>
+
+            body{
+                background-color: #FAFAFA;
+            }
+
+            .mnge-appt-btn{
+                width: max-content;
+                color: #140404;
+                cursor: pointer;
+                background-color: #EDEDED;
+                border: none;
+                border-radius: 4px;
+                font-size: 14px;
+                margin-right: 20px;
+                padding: 15px;
+            }
+
+            .filter-btn{
+                width: max-content;
+                color: #140404;
+                cursor: pointer;
+                background-color: #EDEDED;
+                border: none;
+                border-radius: 4px;
+                font-size: 14px;
+                padding: 15px;
+            }
+
+            .join-vid-btn{
+                width: 80%;
+                color: #fff;
+                cursor: pointer;
+                background-color: #41C0F1;
+                border: none;
+                border-radius: 4px;
+                font-size: 14px;
+                padding: 15px;
+                margin-bottom: 20px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .join-vid-btn svg{
+                width: 20px;
+                margin-right:10px
+            }
+
+            .reschedule-btn{
+                width: 80%;
+                color: #140404;
+                cursor: pointer;
+                background-color: #EDEDED;
+                border: none;
+                border-radius: 4px;
+                font-size: 14px;
+                padding: 15px;
+            }
+
+            .manage-filter-dflex{
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+                margin-right: -15px;
+            }
+
+            .active-appointment-text{
+                margin-left: -15px;
+                margin-bottom: 15px;
+            }
+
+            .past-appointment-text{
+                margin: 40px 0px 15px -15px;
+            }
+
+            .bg-padding-white{
+                padding: 20px;
+                background-color: #fff;
+                margin-bottom: 10px;
+            }
+
+            .link-attach-prescription{
+                color: #41C0F1;
+                text-decoration: none;
+            }
+
+            .header-bg-custom{
+                background-color: #41C0F1;
+                color: #fff;
+            }
+
+            .header a:hover {
+                color: unset;
+            }
+
+            @media(max-width: 768px){
+                .manage-filter-dflex{
+                    margin-right: unset;
+                }
+
+                .active-appointment-text{
+                    margin-left: unset;
+                    margin-top: 35px;
+                }
+
+                .past-appointment-text{
+                    margin: 40px 0px 15px 0;
+                }
+
+                .join-vid-btn{
+                    width: 100%;
+                }
+
+                .reschedule-btn{
+                    width: 100%;
+                }
+
+                .appt-block-margin-mobile{
+                    margin-bottom: 30px;
+                }
+
+            }
+
+            .icon-margin-right-appt{
+                margin-right: 20px;
+            }
+
+            .header-more-icon {
+                position: unset;
+                top: unset;
+                fill: #fff;
+            }
+
+
+            .dropbtn {
+                color: #fff;
+                font-size: 16px;
+                border: none;
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+            }
+
+            .dropdown {
+                position: relative;
+                display: inline-block;
+            }
+
+            .dropdown-content {
+                display: none;
+                position: absolute;
+                background-color: #f9f9f9;
+                margin-top: 33px;
+                min-width: 160px;
+                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                z-index: 1;
+            }
+
+            .dropdown-content a {
+                color: black;
+                padding: 12px 16px;
+                text-decoration: none;
+                display: block;
+            }
+
+            .dropdown-content a:hover {background-color: #41C0F1;}
+
+            .show {
+                display: block;
+            }
+
+            @media(max-width: 576px){
+                .dropdown-content {
+                    margin-top: 23px;
+                }
+            }
+
+        </style>
+
+        <script>
+            /* When the user clicks on the button dropdown, 
+            toggle between hiding and showing the dropdown content */
+            function dropDownOpen() {
+                document.getElementById("myDropdown").classList.toggle("show");
+            }
+            
+            // Close the dropdown if the user clicks outside of it
+            window.onclick = function(e) {
+                if (!e.target.matches('.dropbtn')) {
+                var myDropdown = document.getElementById("myDropdown");
+                    if (myDropdown.classList.contains('show')) {
+                    myDropdown.classList.remove('show');
+                    }
+                }
+            }
+        </script>
+        
+    </head>
+
+    <body>
+
+        <!-- start of header -->
+        <!-- start container for header -->
+        <header class="container-fluid header header-bg-custom desktop-only">
+            <!-- start a tag for logo -->
+            <a href="#">
+            <picture>
+                <!-- <source srcset="https://doccampaign.s3-ap-southeast-1.amazonaws.com/coronavirus/home/doctoroncall-logo-webp.webp" type="image/webp"> -->
+                <img src="./images/DOC-Logo-white.png" class="header-logo" alt="DoctorOnCall Logo" loading="lazy">
+            </picture>
+            </a>
+            <!-- end of a tag for logo -->
+
+            <div style="display: flex;align-items: center;">
+                <a class="health-contact-spprt-btn icon-margin-right-appt" href="#">
+                    <img src="./images/icon-doctors-bag.png" style="width: auto;height: 20px;">
+                </a>
+                <a class="health-contact-spprt-btn icon-margin-right-appt" href="#">
+                    <img src="./images/icon-chat-bubble.png" style="width: auto;height: 20px;">
+                </a>
+                <a class="health-contact-spprt-btn icon-margin-right-appt" href="#">
+                    <svg width="19.797" height="19.797" viewBox="0 0 19.797 19.797"><defs><style>.a{fill:#fff;}</style></defs><g transform="translate(-4 -4)"><path class="a" d="M13.9,4a9.9,9.9,0,1,0,9.9,9.9A9.909,9.909,0,0,0,13.9,4Zm0,11.19a1.271,1.271,0,0,1-.553-.129L10.76,17.646a.43.43,0,0,1-.609-.609l2.586-2.586a1.271,1.271,0,0,1-.129-.553,1.288,1.288,0,0,1,.861-1.212v-6.1a.43.43,0,0,1,.861,0v6.1a1.288,1.288,0,0,1-.43,2.5Zm0,0"/></g></svg>
+                </a>
+                <a class="health-contact-spprt-btn icon-margin-right-appt" href="#">
+                    <svg width="21.797" height="21.797" viewBox="0 0 21.797 21.797"><defs><style>.a{fill:#fff;}.b{fill:#41c0f1;}</style></defs><g transform="translate(-0.41 -0.41)"><path class="a" d="M22.207,16.922V.41H.41v21.8H16.922Z" transform="translate(0 0)"/><rect class="b" width="12.117" height="1.187" transform="translate(5.47 5.967)"/><rect class="b" width="12.117" height="1.187" transform="translate(5.47 9.28)"/><rect class="b" width="12.117" height="1.187" transform="translate(5.47 12.303)"/><path class="b" d="M24.721,20.5,20.35,24.943V20.5Z" transform="translate(-3.949 -3.979)"/></g></svg>
+                </a>                
+                <div class="dropdown icon-margin-right-appt">
+                    <div class="dropbtn" onclick="dropDownOpen()">
+                        Dr Sashini Seeni 
+                        <svg class="header-more-icon" viewBox="0 0 50 50">
+                            <path d="M 4.84375 12.90625 L 2.75 15 L 25 37.25 L 47.25 15 L 45.15625 12.90625 L 25 33.0625 Z ">
+                            </path>
+                        </svg>
+                    </div>
+                    <div class="dropdown-content" id="myDropdown">
+                        <a href="#">My Profile</a>
+                        <a href="#">Consultation History</a>
+                        <a href="#">Prescription</a>
+                    </div>
+                </div>
+                <a class="health-contact-spprt-btn icon-margin-right-appt" href="#">
+                    <svg width="22.042" height="23" viewBox="0 0 22.042 23"><defs><style>.a{fill:#fff;}</style></defs><g transform="translate(-4)"><path class="a" d="M8.792,0a.965.965,0,0,0-.958.958v.958H4.958A.926.926,0,0,0,4,2.875V6.229H26.042V2.875a.926.926,0,0,0-.958-.958H22.208V.958A.965.965,0,0,0,21.25,0h-.958a.965.965,0,0,0-.958.958v.958H10.708V.958A.965.965,0,0,0,9.75,0Zm0,.958H9.75V3.833H8.792Zm11.5,0h.958V3.833h-.958ZM4,7.188V22.042A.926.926,0,0,0,4.958,23H25.083a.926.926,0,0,0,.958-.958V7.188Zm4.792,2.875h2.4v2.4h-2.4Zm3.354,0h2.4v2.4h-2.4Zm3.354,0h2.4v2.4H15.5Zm3.354,0h2.4v2.4h-2.4ZM8.792,13.417h2.4v2.4h-2.4Zm3.354,0h2.4v2.4h-2.4Zm3.354,0h2.4v2.4H15.5Zm3.354,0h2.4v2.4h-2.4ZM8.792,16.771h2.4v2.4h-2.4Zm3.354,0h2.4v2.4h-2.4Zm3.354,0h2.4v2.4H15.5Zm3.354,0h2.4v2.4h-2.4Zm0,0"/></g></svg>
+                </a>
+            </div>        
+            
+        </header>
+        <!-- end of header container -->
+        <!-- end of header -->
+
+        <div class="container">
+            <div style="text-align: center;font-size: 34px;margin:30px 0">Appointment Page</div>
+
+            <div class="manage-filter-dflex">
+                <a class="mnge-appt-btn">Manage Your Appointment</a>
+                <a class="filter-btn">Filter</a>            
+            </div>
+
+            <div class="active-appointment-text">Active Appointments</div>
+            <div class="row bg-padding-white">
+                
+                <div class="col-md-3 appt-block-margin-mobile">
+                    <button class="join-vid-btn">
+                        <svg viewBox="0 0 17.252 10.105"><defs><style>.a{fill:#fff;}</style></defs><g transform="translate(0 -5.68)"><path class="a" d="M0,7.344v6.778a1.609,1.609,0,0,0,1.548,1.664h9.824V5.68H1.548A1.609,1.609,0,0,0,0,7.344Z" transform="translate(0 0)"/><path class="a" d="M21.18,8.765v4.486l5.484,2.012V6.67Z" transform="translate(-9.412 -0.194)"/></g></svg>
+                        Join Video Call
+                    </button>
+                    <button class="reschedule-btn">Reschedule Request</button>
+                </div>
+                <div class="col-md-3 appt-block-margin-mobile">
+                    <div class="video-details-subtext">Date</div>
+                    <div>29 April 2020, Wednesday</div>
+                    <br>
+                    <div class="video-details-subtext">Time</div>
+                    <div>3:00 PM</div>
+                </div>
+                <div class="col-md-3 appt-block-margin-mobile">
+                    <div class="video-details-subtext">Patient's Detail</div>
+                    <div class="patient-health-display-block">                        
+                        <div class="patient-health-profile">
+                            M
+                        </div>
+
+                        <div>
+                            <b>Monica lee</b>
+                            <div style="margin:10px 0">43 Years Old</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 appt-block-margin-mobile">
+                    <div class="video-details-subtext">Conditions for consultation</div>
+                    <div>Fever, cough 2 days</div>
+                    <br>
+                    <div class="video-details-subtext">Attachment</div>
+                    <a class="link-attach-prescription" href="#">prescption.png</a>
+                </div>                
+            </div>
+
+
+            <div class="past-appointment-text">Past Appointments</div>
+            <div class="row bg-padding-white">                
+                <div class="col-md-3 appt-block-margin-mobile">
+                    <button class="join-vid-btn">
+                        <svg viewBox="0 0 17.252 10.105"><defs><style>.a{fill:#fff;}</style></defs><g transform="translate(0 -5.68)"><path class="a" d="M0,7.344v6.778a1.609,1.609,0,0,0,1.548,1.664h9.824V5.68H1.548A1.609,1.609,0,0,0,0,7.344Z" transform="translate(0 0)"/><path class="a" d="M21.18,8.765v4.486l5.484,2.012V6.67Z" transform="translate(-9.412 -0.194)"/></g></svg>
+                        Join Video Call
+                    </button>
+                    <button class="reschedule-btn">Reschedule Request</button>
+                </div>
+                <div class="col-md-3 appt-block-margin-mobile">
+                    <div class="video-details-subtext">Date</div>
+                    <div>29 April 2020, Wednesday</div>
+                    <br>
+                    <div class="video-details-subtext">Time</div>
+                    <div>3:00 PM</div>
+                </div>
+                <div class="col-md-3 appt-block-margin-mobile">
+                    <div class="video-details-subtext">Patient's Detail</div>
+                    <div class="patient-health-display-block">                        
+                        <div class="patient-health-profile">
+                            M
+                        </div>
+
+                        <div>
+                            <b>Monica lee</b>
+                            <div style="margin:10px 0">43 Years Old</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 appt-block-margin-mobile">
+                    <div class="video-details-subtext">Conditions for consultation</div>
+                    <div>Fever, cough 2 days</div>
+                    <br>
+                    <div class="video-details-subtext">Attachment</div>
+                    <a class="link-attach-prescription" href="#">prescption.png</a>
+                </div>                
+            </div>
+
+            <div class="row bg-padding-white">                
+                <div class="col-md-3 appt-block-margin-mobile">
+                    <button class="join-vid-btn">
+                        <svg viewBox="0 0 17.252 10.105"><defs><style>.a{fill:#fff;}</style></defs><g transform="translate(0 -5.68)"><path class="a" d="M0,7.344v6.778a1.609,1.609,0,0,0,1.548,1.664h9.824V5.68H1.548A1.609,1.609,0,0,0,0,7.344Z" transform="translate(0 0)"/><path class="a" d="M21.18,8.765v4.486l5.484,2.012V6.67Z" transform="translate(-9.412 -0.194)"/></g></svg>
+                        Join Video Call
+                    </button>
+                    <button class="reschedule-btn">Reschedule Request</button>
+                </div>
+                <div class="col-md-3 appt-block-margin-mobile">
+                    <div class="video-details-subtext">Date</div>
+                    <div>29 April 2020, Wednesday</div>
+                    <br>
+                    <div class="video-details-subtext">Time</div>
+                    <div>3:00 PM</div>
+                </div>
+                <div class="col-md-3 appt-block-margin-mobile">
+                    <div class="video-details-subtext">Patient's Detail</div>
+                    <div class="patient-health-display-block">                        
+                        <div class="patient-health-profile">
+                            M
+                        </div>
+
+                        <div>
+                            <b>Monica lee</b>
+                            <div style="margin:10px 0">43 Years Old</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 appt-block-margin-mobile">
+                    <div class="video-details-subtext">Conditions for consultation</div>
+                    <div>Fever, cough 2 days</div>
+                    <br>
+                    <div class="video-details-subtext">Attachment</div>
+                    <a class="link-attach-prescription" href="#">prescption.png</a>
+                </div>                
+            </div>
+
+        </div>
+
+        <div style="height: 50px;"></div>
+    </body>
+</html>
